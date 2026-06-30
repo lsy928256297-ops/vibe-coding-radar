@@ -331,6 +331,40 @@ h2 {
   line-height: 1.6;
 }
 
+.radar-skill-card {
+  scroll-margin-top: 72px;
+}
+
+.radar-skill-card > span {
+  display: inline-flex;
+  border: 1px solid var(--acid);
+  background: color-mix(in srgb, var(--acid) 12%, transparent);
+  color: var(--acid);
+  padding: 6px 8px;
+  line-height: 1;
+}
+
+.radar-skill-card strong {
+  white-space: normal;
+}
+
+.radar-skill-actions {
+  display: grid;
+  gap: 8px;
+  margin: 18px 0 16px;
+}
+
+.radar-skill-actions b {
+  display: block;
+  border: 1px solid color-mix(in srgb, var(--acid) 50%, var(--border));
+  background: rgba(255, 255, 255, 0.035);
+  color: var(--paper);
+  font-size: 0.78rem;
+  font-weight: 950;
+  line-height: 1.15;
+  padding: 10px 11px;
+}
+
 .safety-note {
   --module-no: "02";
   --section-color: #ff8a3d;

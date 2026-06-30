@@ -22,7 +22,7 @@
 ## Find Projects Prompt
 
 ```text
-用 Vibe Coding 雷达帮我找 {{count}} 个适合新手的 {{project_type}} 项目。
+请用 Vibe Coding Radar 帮我找 {{count}} 个适合新手的 {{project_type}} 项目。
 
 每个项目请给我：
 1. 项目名

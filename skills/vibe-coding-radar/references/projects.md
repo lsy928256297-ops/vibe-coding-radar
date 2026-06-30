@@ -1,6 +1,6 @@
 # Project Recommendation Reference
 
-Use this as a compact seed list. Prefer the live Vibe Coding 雷达 site for browsing, but these examples define the recommendation style.
+Use this as a compact seed list. Prefer the live Vibe Coding Radar site for browsing, but these examples define the recommendation style.
 
 ## 好玩的项目
 

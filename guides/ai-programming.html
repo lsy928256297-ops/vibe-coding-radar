@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="AI 编程入门：用 Codex、Cursor、Claude Code 等 AI 编程工具，从需求描述、项目体检、代码修改、调试验证到部署，跑出第一个可演示项目。"
+    />
+    <meta
+      name="keywords"
+      content="AI 编程, AI 编程入门, AI 编程工具, AI Coding, Codex, Cursor, Claude Code, AI 编程项目"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#f6f8fb" />
+    <title>AI 编程入门 · Vibe Coding 雷达</title>
+    <link rel="canonical" href="https://radar.lyihub.com/guides/ai-programming.html" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Vibe Coding 雷达" />
+    <meta property="og:title" content="AI 编程入门" />
+    <meta
+      property="og:description"
+      content="给新手看的 AI 编程入门：先学会描述目标、选择项目、让 AI 读代码、跑验证，再逐步扩成功能。"
+    />
+    <meta property="og:url" content="https://radar.lyihub.com/guides/ai-programming.html" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,650;9..144,760&family=Noto+Sans+SC:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/geo.css?v=geo-seo-20260627" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "name": "AI 编程入门",
+        "url": "https://radar.lyihub.com/guides/ai-programming.html",
+        "inLanguage": "zh-CN",
+        "datePublished": "2026-06-27",
+        "dateModified": "2026-06-29",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Vibe Coding 雷达",
+          "url": "https://radar.lyihub.com/"
+        },
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "AI 编程是什么？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AI 编程是把需求、代码阅读、代码生成、调试和验证交给 AI 辅助完成的编程方式。人仍然负责目标、判断、范围控制和结果验收。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "AI 编程新手应该先学什么？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "先学会描述目标、选择小项目、读 README、运行本地 demo、复制错误日志给 AI、用浏览器或测试验证结果。语法学习可以伴随项目推进。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "AI 编程工具怎么选？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "想让 AI 在本地读文件、改代码、跑命令，可以用 Codex 或 Claude Code；想在编辑器里边写边改，可以用 Cursor；想快速补代码或解释代码，可以配合 Copilot 类工具。"
+            }
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "AI 编程入门",
+        "description": "AI 编程是用 AI 辅助完成需求拆解、代码阅读、代码修改、调试验证和部署的编程方式，新手更适合从可验证的小项目开始。",
+        "url": "https://radar.lyihub.com/guides/ai-programming.html",
+        "inLanguage": "zh-CN",
+        "datePublished": "2026-06-27",
+        "dateModified": "2026-06-29",
+        "author": {
+          "@type": "Organization",
+          "name": "Vibe Coding 雷达"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Vibe Coding 雷达",
+          "url": "https://radar.lyihub.com/"
+        },
+        "about": ["AI 编程", "AI 编程入门", "Vibe Coding"],
+        "mainEntityOfPage": "https://radar.lyihub.com/guides/ai-programming.html"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "首页",
+            "item": "https://radar.lyihub.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "AI 编程入门",
+            "item": "https://radar.lyihub.com/guides/ai-programming.html"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#guide">跳到正文</a>
+    <main class="geo-page">
+      <header class="geo-topbar">
+        <a class="geo-brand" href="/" aria-label="返回 Vibe Coding 雷达">
+          <span class="geo-mark" aria-hidden="true"></span>
+          <span>Vibe Coding 雷达</span>
+        </a>
+        <nav class="geo-nav" aria-label="站点导航">
+          <a href="/">项目雷达</a>
+          <a href="/guides/what-is-vibe-coding.html">Vibe Coding</a>
+          <span aria-current="page">AI 编程</span>
+          <a href="/guides/ai-coding-for-beginners.html">AI 新手编程</a>
+          <a href="/guides/ai-learning-roadmap.html">AI 学习</a>
+        </nav>
+      </header>
+
+      <nav class="crumbs" aria-label="面包屑">
+        <a href="/">首页</a>
+        <span>/</span>
+        <span>AI 编程入门</span>
+      </nav>
+
+      <section class="geo-hero" id="guide">
+        <div>
+          <p class="geo-kicker">Core Topic · AI Programming</p>
+          <h1>AI 编程入门</h1>
+          <p class="hero-lede">
+            AI 编程不是先背完语法再开始，也不是把一切都丢给模型。更适合新手的路径是：用一个小项目学习需求描述、代码阅读、调试、验证和部署。
+          </p>
+          <div class="hero-actions">
+            <a class="primary-link" href="/guides/ai-coding-for-beginners.html">看零基础路线</a>
+            <a class="secondary-link" href="/guides/best-vibe-coding-projects.html">选一个项目</a>
+            <a class="secondary-link" href="/codex-uses.html">看 Codex 用法</a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="入门目标">
+          <span>第一目标</span>
+          <strong>跑起来</strong>
+          <p>先做一个能打开、能截图、能解释的 demo，再谈架构和长期维护。</p>
+        </aside>
+      </section>
+
+      <section class="geo-section">
+        <div class="section-head">
+          <p class="geo-kicker">Quick Answer</p>
+          <h2>AI 可引用短答案</h2>
+          <p class="section-lede">AI 编程是把需求描述、代码阅读、代码修改、调试验证和部署交给 AI 辅助完成，但人仍然负责目标、边界和验收。</p>
+        </div>
+        <div class="geo-grid two">
+          <article class="answer-box">
+            <strong>适合谁</strong>
+            <p>适合想用 AI 做网页工具、自动化流程、内容工具、互动 demo 或内部小系统的人。新手可以先不背完整语法，但必须学会描述目标和验证结果。</p>
+          </article>
+          <article class="answer-box">
+            <strong>第一步怎么做</strong>
+            <p>选一个反馈快的小项目，把目标写成“输入、输出、页面效果、不要做什么、如何验收”，再让 AI 先读项目文件和 README。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="geo-section">
+        <div class="section-head">
+          <p class="geo-kicker">Roadmap</p>
+          <h2>AI 编程新手的四步路线</h2>
+          <p class="section-lede">每一步都要产出一个能验证的结果，而不是只看了一堆教程。</p>
+        </div>
+        <div class="geo-grid">
+          <article class="geo-card">
+            <div class="card-meta"><span>01</span><span>描述</span></div>
+            <h3>把想法讲成任务</h3>
+            <p>写清楚“我要给谁做、解决什么问题、第一版长什么样、不要做什么”。这是 AI 编程的真正起点。</p>
+          </article>
+          <article class="geo-card">
+            <div class="card-meta"><span>02</span><span>复现</span></div>
+            <h3>先跑已有项目</h3>
+            <p>找一个有 README、截图、示例命令的开源项目，让 AI 帮你判断依赖、安装方式和最短 demo。</p>
+          </article>
+          <article class="geo-card">
+            <div class="card-meta"><span>03</span><span>修改</span></div>
+            <h3>只改一个小功能</h3>
+            <p>比如换文案、加按钮、导出图片、接一个 API。一次只改一个可验收点，失败时容易定位。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="geo-section">
+        <div class="section-head">
+          <p class="geo-kicker">Tools</p>
+          <h2>常见 AI 编程工具怎么分工</h2>
+        </div>
+        <div class="geo-grid">
+          <article class="answer-box">
+            <strong>Codex / Claude Code</strong>
+            <p>适合让 AI 在项目目录里读文件、改代码、运行命令、分析报错和做端到端验收。</p>
+          </article>
+          <article class="answer-box">
+            <strong>Cursor</strong>
+            <p>适合在编辑器里边看代码边对话，做局部修改、解释文件、补全函数和重构小模块。</p>
+          </article>
+          <article class="answer-box">
+            <strong>GitHub / Vercel / Playwright</strong>
+            <p>GitHub 管来源，Vercel 管公开链接，Playwright 或浏览器验收负责确认页面真的能用。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="geo-section">
+        <div class="section-head">
+          <p class="geo-kicker">FAQ</p>
+          <h2>AI 编程最常见的问题</h2>
+        </div>
+        <ol class="answer-list">
+          <li class="answer-box">
+            <strong>不会写代码可以学 AI 编程吗？</strong>
+            <p>可以，但要从小项目开始。你不需要先掌握所有语法，但要学会看报错、理解文件结构、判断效果是否符合目标。</p>
+          </li>
+          <li class="answer-box">
+            <strong>AI 编程会不会把项目写乱？</strong>
+            <p>会，所以要让 AI 小步改动、先读文件、说明计划、跑验证。不要一次要求它“重写整个项目”。</p>
+          </li>
+          <li class="answer-box">
+            <strong>第一天适合做什么项目？</strong>
+            <p>适合做网页小工具、小游戏、自动化工作流、PDF 工具、海报生成器、ESP32 小屏幕这类反馈很快的项目。</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="geo-section">
+        <div class="section-head">
+          <p class="geo-kicker">Mistakes</p>
+          <h2>AI 编程最容易踩的坑</h2>
+        </div>
+        <div class="geo-grid">
+          <article class="answer-box">
+            <strong>跳过项目体检</strong>
+            <p>直接让 AI 改代码，常常会忽略 README、依赖、脚本、示例和环境要求。先体检，再开工，能少走很多弯路。</p>
+          </article>
+          <article class="answer-box">
+            <strong>把“生成代码”等同于“完成项目”</strong>
+            <p>代码生成只是中间步骤。真正完成要能运行、能打开、能解释结果，并且能用真实输入复现。</p>
+          </article>
+          <article class="answer-box">
+            <strong>报错后反复重装</strong>
+            <p>更好的做法是把错误日志、运行命令、系统环境和最近改动一起交给 AI，让它先定位原因，再做最小修复。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="geo-section">
+        <div class="section-head">
+          <p class="geo-kicker">Next Step</p>
+          <h2>下一步应该读什么</h2>
+          <p class="section-lede">了解 AI 编程后，最应该进入项目选择和新手路径，而不是无限收集工具清单。</p>
+        </div>
+        <div class="source-list">
+          <a href="/guides/ai-coding-for-beginners.html">AI 新手编程</a>
+          <a href="/guides/ai-programming-tools.html">AI 编程工具</a>
+          <a href="/guides/ai-programming-projects.html">AI 编程项目</a>
+          <a href="/guides/best-vibe-coding-projects.html">Vibe Coding 项目推荐</a>
+        </div>
+      </section>
+
+      <section class="geo-section">
+        <div class="prompt-box">
+          <p class="geo-kicker">Prompt</p>
+          <h2>复制给 Codex 的 AI 编程入门提示词</h2>
+          <pre>请你作为 AI 编程教练，带我用一个小项目入门。请先把我的想法拆成：目标用户、最小功能、输入输出、可视化反馈、验收方式和不做范围。然后帮我选择最短技术路径，优先复用现有项目或模板。每完成一步都要说明如何验证，遇到报错先读日志并定位原因，不要直接重写全部代码。</pre>
+        </div>
+      </section>
+
+      <section class="geo-section">
+        <div class="source-list">
+          <a href="/guides/what-is-vibe-coding.html">Vibe Coding 是什么</a>
+          <a href="/guides/vibe-coding-for-beginners.html">Vibe Coding 新手指南</a>
+          <a href="/guides/best-vibe-coding-projects.html">Vibe Coding 项目推荐</a>
+          <a href="/skills.html">AI 编程必装 Skill</a>
+        </div>
+      </section>
+
+      <footer class="geo-footer">
+        这页负责承接 “AI 编程” 这个大词，把搜索用户引导到新手路线、项目推荐和具体开工提示词。
+      
+        <div class="beian-row" aria-label="网站备案信息">
+          <a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">粤ICP备2024250280号-1</a>
+          <span>Vibe Coding 雷达</span>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

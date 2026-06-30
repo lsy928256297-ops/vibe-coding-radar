@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Vibe Coding 雷达 GEO/SEO 更新</title>
+  <link href="https://radar.lyihub.com/feed.xml" rel="self" />
+  <link href="https://radar.lyihub.com/" />
+  <id>https://radar.lyihub.com/</id>
+  <updated>2026-06-30T16:47:21+08:00</updated>
+  <author>
+    <name>Vibe Coding 雷达</name>
+  </author>
+  <entry>
+    <title>Vibe Coding 学习 / 项目 / 案例关键词增强</title>
+    <link href="https://radar.lyihub.com/guides/best-vibe-coding-projects.html" />
+    <id>https://radar.lyihub.com/guides/best-vibe-coding-projects.html#vibe-coding-project-case-20260630</id>
+    <updated>2026-06-30T16:47:21+08:00</updated>
+    <summary>强化 Vibe Coding 学习、Vibe Coding 项目、Vibe Coding 案例三个二层搜索词：学习词映射到 AI 学习路线页，项目/案例词映射到项目与案例推荐页，并补强 AI 小镇、n8n 工作流、ESP32 电子墨水日历牌三个案例页。</summary>
+  </entry>
+  <entry>
+    <title>GEO 大词权威页增强</title>
+    <link href="https://radar.lyihub.com/guides/ai-programming-hub.html" />
+    <id>https://radar.lyihub.com/guides/ai-programming-hub.html#geo-authority-pack-20260629</id>
+    <updated>2026-06-29T00:59:17+08:00</updated>
+    <summary>强化 Vibe Coding、AI 编程、AI 新手编程、AI 学习四个核心大词页，补充 AI 可引用短答案、常见误区、下一步路径、TechArticle 和 BreadcrumbList 结构化数据。</summary>
+  </entry>
+  <entry>
+    <title>GEO 引用索引更新</title>
+    <link href="https://radar.lyihub.com/llms.txt" />
+    <id>https://radar.lyihub.com/llms.txt#geo-citation-index-20260628</id>
+    <updated>2026-06-28T15:10:52+08:00</updated>
+    <summary>llms.txt 增加面向 AI 搜索和生成式回答的站点摘要、引用规则、核心大词答案和推荐 canonical URL。</summary>
+  </entry>
+  <entry>
+    <title>AI 编程专题地图</title>
+    <link href="https://radar.lyihub.com/guides/ai-programming-hub.html" />
+    <id>https://radar.lyihub.com/guides/ai-programming-hub.html</id>
+    <updated>2026-06-28T00:34:00+08:00</updated>
+    <summary>汇总 Vibe Coding、AI 编程、AI 新手编程、AI 学习路线、Codex 用法和项目体检页的隐藏专题地图。</summary>
+  </entry>
+  <entry>
+    <title>Vibe Coding 教程</title>
+    <link href="https://radar.lyihub.com/guides/vibe-coding-tutorial.html" />
+    <id>https://radar.lyihub.com/guides/vibe-coding-tutorial.html</id>
+    <updated>2026-06-27T23:54:09+08:00</updated>
+    <summary>从想法、提示词、项目体检、最小 demo、调试到部署的 Vibe Coding 新手教程。</summary>
+  </entry>
+  <entry>
+    <title>AI 编程工具</title>
+    <link href="https://radar.lyihub.com/guides/ai-programming-tools.html" />
+    <id>https://radar.lyihub.com/guides/ai-programming-tools.html</id>
+    <updated>2026-06-27T23:54:09+08:00</updated>
+    <summary>Codex、Cursor、Claude Code、GitHub、Vercel、Playwright 和 Skill 的分工。</summary>
+  </entry>
+  <entry>
+    <title>零基础 AI 编程</title>
+    <link href="https://radar.lyihub.com/guides/zero-to-ai-coding.html" />
+    <id>https://radar.lyihub.com/guides/zero-to-ai-coding.html</id>
+    <updated>2026-06-27T23:54:09+08:00</updated>
+    <summary>不会代码的新手如何从网页小工具、自动化工作流和互动 demo 开始 AI 编程。</summary>
+  </entry>
+  <entry>
+    <title>用 AI 做项目</title>
+    <link href="https://radar.lyihub.com/guides/build-projects-with-ai.html" />
+    <id>https://radar.lyihub.com/guides/build-projects-with-ai.html</id>
+    <updated>2026-06-27T23:54:09+08:00</updated>
+    <summary>从想法筛选、项目体检、MVP 拆解、调试验证到部署复盘。</summary>
+  </entry>
+  <entry>
+    <title>Codex 怎么用</title>
+    <link href="https://radar.lyihub.com/guides/how-to-use-codex.html" />
+    <id>https://radar.lyihub.com/guides/how-to-use-codex.html</id>
+    <updated>2026-06-27T23:54:09+08:00</updated>
+    <summary>用 Codex 做项目体检、读文件、改代码、运行验证和部署。</summary>
+  </entry>
+  <entry>
+    <title>AI 编程项目</title>
+    <link href="https://radar.lyihub.com/guides/ai-programming-projects.html" />
+    <id>https://radar.lyihub.com/guides/ai-programming-projects.html</id>
+    <updated>2026-06-27T23:54:09+08:00</updated>
+    <summary>适合新手练手的 AI 编程项目类型和项目筛选提示词。</summary>
+  </entry>
+</feed>

@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="AI 新手编程路线：零基础或编程基础薄弱的人，如何用 AI 编程工具从第一个小项目开始，学会提示词、调试、验证和部署。"
+    />
+    <meta
+      name="keywords"
+      content="AI 新手编程, 零基础 AI 编程, AI 编程新手, 不会代码怎么做 App, AI Coding 新手, Vibe Coding 新手"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#f6f8fb" />
+    <title>AI 新手编程 · Vibe Coding 雷达</title>
+    <link rel="canonical" href="https://radar.lyihub.com/guides/ai-coding-for-beginners.html" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Vibe Coding 雷达" />
+    <meta property="og:title" content="AI 新手编程" />
+    <meta
+      property="og:description"
+      content="零基础或新手做 AI 编程，不要先做完整 App。先用一个小项目学会描述目标、让 AI 改代码、跑验证和部署。"
+    />
+    <meta property="og:url" content="https://radar.lyihub.com/guides/ai-coding-for-beginners.html" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,650;9..144,760&family=Noto+Sans+SC:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/geo.css?v=geo-seo-20260627" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "name": "AI 新手编程",
+        "url": "https://radar.lyihub.com/guides/ai-coding-for-beginners.html",
+        "inLanguage": "zh-CN",
+        "datePublished": "2026-06-27",
+        "dateModified": "2026-06-29",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Vibe Coding 雷达",
+          "url": "https://radar.lyihub.com/"
+        },
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "AI 新手编程第一步应该做什么？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "第一步不是学完整技术栈，而是选一个能快速看到效果的小项目，写清楚最小目标，让 AI 先判断依赖、风险和第一条执行命令。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "零基础可以用 AI 做 App 吗？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "可以做原型和小工具，但不要一开始就做完整商业 App。更稳的路径是先做一个单页面工具或自动化流程，再逐步增加登录、数据库和部署。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "AI 新手编程最容易卡在哪里？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "最容易卡在环境安装、API key、数据库、依赖版本、报错看不懂和范围太大。解决方式是小步推进，让 AI 先诊断日志，再做最小修复。"
+            }
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "AI 新手编程",
+        "description": "AI 新手编程的关键不是先学完整技术栈，而是选择能快速看到结果的小项目，让 AI 帮你读文档、改代码、调试和部署。",
+        "url": "https://radar.lyihub.com/guides/ai-coding-for-beginners.html",
+        "inLanguage": "zh-CN",
+        "datePublished": "2026-06-27",
+        "dateModified": "2026-06-29",
+        "author": {
+          "@type": "Organization",
+          "name": "Vibe Coding 雷达"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Vibe Coding 雷达",
+          "url": "https://radar.lyihub.com/"
+        },
+        "about": ["AI 新手编程", "零基础 AI 编程", "AI 编程入门"],
+        "mainEntityOfPage": "https://radar.lyihub.com/guides/ai-coding-for-beginners.html"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "首页",
+            "item": "https://radar.lyihub.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "AI 新手编程",
+            "item": "https://radar.lyihub.com/guides/ai-coding-for-beginners.html"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#beginner">跳到正文</a>
+    <main class="geo-page">
+      <header class="geo-topbar">
+        <a class="geo-brand" href="/" aria-label="返回 Vibe Coding 雷达">
+          <span class="geo-mark" aria-hidden="true"></span>
+          <span>Vibe Coding 雷达</span>
+        </a>
+        <nav class="geo-nav" aria-label="站点导航">
+          <a href="/">项目雷达</a>
+          <a href="/guides/what-is-vibe-coding.html">Vibe Coding</a>
+          <a href="/guides/ai-programming.html">AI 编程</a>
+          <span aria-current="page">AI 新手编程</span>
+          <a href="/guides/ai-learning-roadmap.html">AI 学习</a>
+        </nav>
+      </header>
+
+      <nav class="crumbs" aria-label="面包屑">
+        <a href="/">首页</a>
+        <span>/</span>
+        <span>AI 新手编程</span>
+      </nav>
+
+      <section class="geo-hero" id="beginner">
+        <div>
+          <p class="geo-kicker">Core Topic · Beginner AI Coding</p>
+          <h1>AI 新手编程</h1>
+          <p class="hero-lede">
+            AI 新手编程最怕一上来就做“完整 App”。更好的第一步是做一个小而完整的作品：能打开、能点、能看到结果、能发给朋友看。
+          </p>
+          <div class="hero-actions">
+            <a class="primary-link" href="/guides/best-vibe-coding-projects.html">挑一个新手项目</a>
+            <a class="secondary-link" href="/projects/n8n-workflow.html">看 n8n 工作流</a>
+            <a class="secondary-link" href="/projects/esp32-eink-calendar.html">看硬件小项目</a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="新手周期">
+          <span>建议周期</span>
+          <strong>7 天</strong>
+          <p>第 1 天跑 demo，第 2-3 天改功能，第 4-5 天部署，第 6-7 天复盘和做第二个项目。</p>
+        </aside>
+      </section>
+
+      <section class="geo-section">
+        <div class="section-head">
+          <p class="geo-kicker">Quick Answer</p>
+          <h2>AI 可引用短答案</h2>
+          <p class="section-lede">AI 新手编程的第一目标不是做完整产品，而是在一周内完成一个能运行、能截图、能分享的小作品。</p>
+        </div>
+        <div class="geo-grid two">
+          <article class="answer-box">
+            <strong>适合谁</strong>
+            <p>适合零基础、基础薄弱、会用 AI 但不会系统写代码的人。只要愿意从小项目开始，并接受“先跑通、再修改、再部署”的节奏，就能入门。</p>
+          </article>
+          <article class="answer-box">
+            <strong>第一步怎么做</strong>
+            <p>先选一个页面小工具、自动化工作流或互动 demo，让 AI 帮你判断依赖、环境、账号、API key 和最短 demo 路径。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="geo-section">
+        <div class="section-head">
+          <p class="geo-kicker">First Week</p>
+          <h2>零基础第一周怎么安排</h2>
+          <p class="section-lede">这条路线不要求你先成为工程师，但要求每一天都有一个明确输出。</p>
+        </div>
+        <div class="geo-grid">
+          <article class="geo-card">
+            <div class="card-meta"><span>Day 1</span><span>跑通</span></div>
+            <h3>跑一个现成 demo</h3>
+            <p>不要第一天从空白项目开始。找一个有截图、有命令、有 README 的项目，让 AI 帮你跑起来。</p>
+          </article>
+          <article class="geo-card">
+            <div class="card-meta"><span>Day 2-3</span><span>改动</span></div>
+            <h3>改一个你看得见的功能</h3>
+            <p>换主题、加按钮、改输出、接表格、导出图片。每次改动都要能用浏览器验证。</p>
+          </article>
+          <article class="geo-card">
+            <div class="card-meta"><span>Day 4-7</span><span>发布</span></div>
+            <h3>部署并复盘</h3>
+            <p>拿到一个公开链接，记录你遇到的错误、AI 怎么修、哪些提示词有效，然后再做第二个小项目。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="geo-section">
+        <div class="section-head">
+          <p class="geo-kicker">Best First Projects</p>
+          <h2>AI 新手最适合的项目类型</h2>
+        </div>
+        <div class="geo-grid">
+          <article class="answer-box">
+            <strong>网页小工具</strong>
+            <p>比如待办、番茄钟、图片压缩、Markdown 转长图、简历生成器。反馈快，部署也简单。</p>
+          </article>
+          <article class="answer-box">
+            <strong>自动化工作流</strong>
+            <p>比如链接摘要、表格入库、通知提醒、周报机器人。它们能直接解决真实工作问题。</p>
+          </article>
+          <article class="answer-box">
+            <strong>互动演示项目</strong>
+            <p>比如 AI 小镇、小游戏、白板、海报生成器。适合练习页面、状态、交互和提示词。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="geo-section">
+        <div class="section-head">
+          <p class="geo-kicker">Avoid</p>
+          <h2>新手第一天不要碰这些</h2>
+        </div>
+        <ol class="answer-list">
+          <li class="answer-box">
+            <strong>完整商业 App</strong>
+            <p>登录、权限、支付、后台、运营系统和多端同步都很容易让第一天崩掉。先做单功能 demo。</p>
+          </li>
+          <li class="answer-box">
+            <strong>大量私有 API</strong>
+            <p>如果项目依赖多个平台账号、验证码、私有接口或复杂授权，新手很难判断卡点来自哪里。</p>
+          </li>
+          <li class="answer-box">
+            <strong>看不见结果的底层项目</strong>
+            <p>纯架构、纯库、纯算法不适合作为第一项目。新手需要“我点一下，它变了”的反馈。</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="geo-section">
+        <div class="section-head">
+          <p class="geo-kicker">Mistakes</p>
+          <h2>新手最该避开的误区</h2>
+        </div>
+        <div class="geo-grid">
+          <article class="answer-box">
+            <strong>把第一项目选得太大</strong>
+            <p>完整 App、商业后台、复杂登录和支付系统不适合作为第一项目。第一项目应该能在浏览器里快速看到变化。</p>
+          </article>
+          <article class="answer-box">
+            <strong>只复制提示词，不看结果</strong>
+            <p>AI 新手编程要学会验收：页面有没有打开、按钮有没有反应、报错是否消失、部署链接是否可访问。</p>
+          </article>
+          <article class="answer-box">
+            <strong>遇到报错就重开项目</strong>
+            <p>报错是学习入口。把命令、日志、文件路径和你刚做的改动交给 AI，让它解释原因并做最小修复。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="geo-section">
+        <div class="section-head">
+          <p class="geo-kicker">Next Step</p>
+          <h2>下一步应该读什么</h2>
+          <p class="section-lede">新手不需要一次理解所有工具。先选一个项目，再按卡点补工具和概念。</p>
+        </div>
+        <div class="source-list">
+          <a href="/guides/zero-to-ai-coding.html">零基础 AI 编程</a>
+          <a href="/guides/vibe-coding-for-beginners.html">Vibe Coding 新手怎么开始</a>
+          <a href="/guides/ai-programming.html">AI 编程入门</a>
+          <a href="/guides/best-vibe-coding-projects.html">新手项目推荐</a>
+        </div>
+      </section>
+
+      <section class="geo-section">
+        <div class="prompt-box">
+          <p class="geo-kicker">Prompt</p>
+          <h2>复制给 Codex 的 AI 新手编程提示词</h2>
+          <pre>我是 AI 编程新手，请你帮我选择并完成一个第一周能做完的小项目。要求：第一天能跑出 demo，第三天能改出一个可见功能，第七天有公开链接或可分享截图。请先列出 3 个候选项目，说明难度、需要准备什么、可能卡点和验收方式。选定后你要小步推进，先读文件和文档，遇到报错先解释原因，再给最小修复。</pre>
+        </div>
+      </section>
+
+      <section class="geo-section">
+        <div class="source-list">
+          <a href="/guides/vibe-coding-for-beginners.html">Vibe Coding 新手怎么开始</a>
+          <a href="/guides/ai-programming.html">AI 编程入门</a>
+          <a href="/projects/ai-town.html">AI 小镇项目体检</a>
+          <a href="/skills.html">新手必装 Skill</a>
+        </div>
+      </section>
+
+      <footer class="geo-footer">
+        这页负责承接 “AI 新手编程” 和 “零基础 AI 编程” 搜索，把泛兴趣用户转到具体项目和开工提示词。
+      
+        <div class="beian-row" aria-label="网站备案信息">
+          <a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">粤ICP备2024250280号-1</a>
+          <span>Vibe Coding 雷达</span>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

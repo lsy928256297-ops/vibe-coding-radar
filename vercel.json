@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://radar.lyihub.com/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "destination": "https://radar.lyihub.com/:path*",
+      "permanent": true
+    }
+  ]
+}

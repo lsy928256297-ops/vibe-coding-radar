@@ -1,0 +1,32 @@
+.vercel/
+node_modules/
+.DS_Store
+
+# Local/private dashboards
+analytics.html
+monitor.html
+src/monitor.css
+
+# Local agent/project rules
+AGENTS.md
+
+# Generated previews and working outputs
+desktop-preview.png
+mobile-preview.png
+*-preview.png
+*-public-*.png
+*-visible-*.png
+beian-footer-*.png
+all-columns-preview.png
+board-cdp-preview.png
+board-mobile-preview.png
+board-preview.png
+public-weekly-stars-*.png
+weekly-stars-*.png
+outputs/
+docs/superpowers/
+test/*-screenshot.png
+*.inspect.ndjson
+
+# Stray temporary files
+src/XX*

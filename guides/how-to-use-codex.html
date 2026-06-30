@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Codex 怎么用：给 AI 编程新手的 Codex 使用方法，包括项目体检、读文件、改代码、运行验证、部署和复制开工提示词。"
+    />
+    <meta
+      name="keywords"
+      content="Codex 怎么用, Codex 教程, Codex 项目体检, Codex 开工提示词, AI 编程, Vibe Coding"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#f6f8fb" />
+    <title>Codex 怎么用 · Vibe Coding 雷达</title>
+    <link rel="canonical" href="https://radar.lyihub.com/guides/how-to-use-codex.html" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Vibe Coding 雷达" />
+    <meta property="og:title" content="Codex 怎么用" />
+    <meta property="og:description" content="新手用 Codex 做项目：先做体检，再小步改代码，最后用测试、浏览器或部署链接验收。" />
+    <meta property="og:url" content="https://radar.lyihub.com/guides/how-to-use-codex.html" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,650;9..144,760&family=Noto+Sans+SC:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/geo.css?v=geo-seo-20260627" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "name": "Codex 怎么用",
+        "url": "https://radar.lyihub.com/guides/how-to-use-codex.html",
+        "inLanguage": "zh-CN",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Vibe Coding 雷达",
+          "url": "https://radar.lyihub.com/"
+        },
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Codex 怎么用来做项目？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "把项目目标、文件路径、限制条件和验收方式告诉 Codex，让它先读文件和文档，再提出最小计划。每次只让它改一个可验证点，并要求运行测试或浏览器验收。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Codex 开工提示词要写什么？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "提示词要包含目标、现有链接、最小 demo、不要做什么、可能卡点、验收方式和遇错处理方式。明确要求先诊断再修改。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Codex 适合新手吗？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "适合，但新手要用小项目和清晰验收来约束它。不要一开始要求 Codex 做完整产品，先让它帮你跑通一个小切片。"
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#codex">跳到正文</a>
+    <main class="geo-page">
+      <header class="geo-topbar">
+        <a class="geo-brand" href="/" aria-label="返回 Vibe Coding 雷达">
+          <span class="geo-mark" aria-hidden="true"></span>
+          <span>Vibe Coding 雷达</span>
+        </a>
+        <nav class="geo-nav" aria-label="专题导航">
+          <a href="/codex-uses.html">Codex 趣味用法</a>
+          <span aria-current="page">Codex 怎么用</span>
+          <a href="/guides/ai-programming-tools.html">AI 编程工具</a>
+          <a href="/guides/vibe-coding-tutorial.html">Vibe Coding 教程</a>
+        </nav>
+      </header>
+
+      <nav class="crumbs" aria-label="面包屑">
+        <a href="/">首页</a>
+        <span>/</span>
+        <span>Codex 怎么用</span>
+      </nav>
+
+      <section class="geo-hero" id="codex">
+        <div>
+          <p class="geo-kicker">Codex · AI Programming</p>
+          <h1>Codex 怎么用</h1>
+          <p class="hero-lede">
+            Codex 最适合用来做项目推进：读代码、改文件、运行命令、分析错误、做验证。新手要给它明确目标和边界。
+          </p>
+          <div class="hero-actions">
+            <a class="primary-link" href="/guides/build-projects-with-ai.html">用 AI 做项目</a>
+            <a class="secondary-link" href="/guides/ai-programming.html">AI 编程入门</a>
+            <a class="secondary-link" href="/skills.html">必装 Skill</a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="Codex 方法">
+          <span>用法</span>
+          <strong>先读后改</strong>
+          <p>让 Codex 先理解项目，再小步执行，并用证据验收。</p>
+        </aside>
+      </section>
+
+      <section class="geo-section">
+        <div class="section-head">
+          <p class="geo-kicker">Workflow</p>
+          <h2>Codex 做项目的标准流程</h2>
+        </div>
+        <div class="geo-grid">
+          <article class="geo-card">
+            <div class="card-meta"><span>01</span><span>读取</span></div>
+            <h3>先让它读上下文</h3>
+            <p>让 Codex 读取 README、package、脚本、入口文件和相关文档，先总结项目结构和风险。</p>
+          </article>
+          <article class="geo-card">
+            <div class="card-meta"><span>02</span><span>执行</span></div>
+            <h3>一次只做一个改动</h3>
+            <p>让 Codex 先说要改哪些文件，再执行最小修改。不要同时让它改 UI、后端、部署和数据结构。</p>
+          </article>
+          <article class="geo-card">
+            <div class="card-meta"><span>03</span><span>验证</span></div>
+            <h3>用命令或浏览器验收</h3>
+            <p>跑语法检查、测试、构建、curl 或浏览器截图。没有验证结果，就不要说完成。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="geo-section">
+        <div class="prompt-box">
+          <p class="geo-kicker">Prompt</p>
+          <h2>复制给 Codex 的标准开工提示词</h2>
+          <pre>请你作为 Codex 项目搭档，先读取当前项目的 README、依赖文件、入口文件和相关文档，判断这个项目的结构、运行方式、可能卡点和最短 demo 路径。请先给出执行计划，说明要改哪些文件、如何验证、哪些事情暂时不做。执行时小步推进，遇到错误先诊断日志，不要直接重写整个项目。</pre>
+        </div>
+      </section>
+
+      <footer class="geo-footer">
+        这页面向搜索 “Codex 怎么用” 的用户，负责把工具用法转成项目执行流程。
+      
+        <div class="beian-row" aria-label="网站备案信息">
+          <a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">粤ICP备2024250280号-1</a>
+          <span>Vibe Coding 雷达</span>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

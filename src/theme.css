@@ -1,0 +1,16 @@
+:root {
+  --bg: #f6f8fb;
+  --paper: #f8fafc;
+  --ink: #111827;
+  --muted: #657287;
+  --line: #dbe3ee;
+  --line-strong: #c9d4e3;
+  --blue: #225cff;
+  --soft-blue: #e9efff;
+  --green: #18a058;
+  --orange: #ff6a3d;
+  --acid: #d9f85d;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-display: "Fraunces", "Noto Sans SC", serif;
+  --shadow: 10px 12px 0 rgba(17, 24, 39, 0.08);
+}

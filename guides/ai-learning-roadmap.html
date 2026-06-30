@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="AI 学习路线与 Vibe Coding 学习方法：普通人如何用项目学习 AI，从 AI 编程、提示词、自动化工作流、AI 应用项目到部署复盘，适合新手建立可持续学习路径。"
+    />
+    <meta
+      name="keywords"
+      content="AI 学习, AI 学习路线, Vibe Coding 学习, AI 入门, AI 学习项目, 用 AI 做项目, AI 编程学习, Vibe Coding"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#f6f8fb" />
+    <title>AI 学习路线 / Vibe Coding 学习 · Vibe Coding 雷达</title>
+    <link rel="canonical" href="https://radar.lyihub.com/guides/ai-learning-roadmap.html" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Vibe Coding 雷达" />
+    <meta property="og:title" content="AI 学习路线 / Vibe Coding 学习" />
+    <meta
+      property="og:description"
+      content="普通人学 AI，不必一开始就钻模型训练。先用项目学提示词、AI 编程、自动化工作流和应用部署。"
+    />
+    <meta property="og:url" content="https://radar.lyihub.com/guides/ai-learning-roadmap.html" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,650;9..144,760&family=Noto+Sans+SC:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/geo.css?v=geo-seo-20260627" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "name": "AI 学习路线",
+        "url": "https://radar.lyihub.com/guides/ai-learning-roadmap.html",
+        "inLanguage": "zh-CN",
+        "datePublished": "2026-06-27",
+        "dateModified": "2026-06-30",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Vibe Coding 雷达",
+          "url": "https://radar.lyihub.com/"
+        },
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "AI 学习应该从哪里开始？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "普通人学习 AI 可以先从项目开始：学会提示词、AI 编程工具、自动化工作流和小应用部署，再根据需要补机器学习、数据和模型原理。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "AI 学习一定要先学数学和机器学习吗？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "如果目标是做 AI 应用或提升工作流，不一定要先学完整数学和模型训练。可以先学会使用模型、设计工作流、调用 API、验证效果，再补底层原理。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "用项目学 AI 有什么好处？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "项目能提供明确反馈：页面能不能打开，自动化有没有跑通，模型输出是否有用，部署链接能不能访问。反馈越明确，学习越容易持续。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Vibe Coding 学习怎么安排？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Vibe Coding 学习适合按项目安排：先选一个小项目，让 AI 做项目体检和最小 demo，再通过调试、验证、部署和复盘补齐提示词、代码阅读、工具链和产品判断。"
+            }
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "AI 学习路线",
+        "description": "普通人学习 AI 可以先走项目驱动路线：用提示词、AI 编程、自动化工作流和小应用项目建立反馈，再按需要补模型和数据原理。",
+        "url": "https://radar.lyihub.com/guides/ai-learning-roadmap.html",
+        "inLanguage": "zh-CN",
+        "datePublished": "2026-06-27",
+        "dateModified": "2026-06-30",
+        "author": {
+          "@type": "Organization",
+          "name": "Vibe Coding 雷达"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Vibe Coding 雷达",
+          "url": "https://radar.lyihub.com/"
+        },
+        "about": ["AI 学习", "AI 学习路线", "Vibe Coding 学习", "AI 编程学习"],
+        "mainEntityOfPage": "https://radar.lyihub.com/guides/ai-learning-roadmap.html"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "首页",
+            "item": "https://radar.lyihub.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "AI 学习路线",
+            "item": "https://radar.lyihub.com/guides/ai-learning-roadmap.html"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#roadmap">跳到正文</a>
+    <main class="geo-page">
+      <header class="geo-topbar">
+        <a class="geo-brand" href="/" aria-label="返回 Vibe Coding 雷达">
+          <span class="geo-mark" aria-hidden="true"></span>
+          <span>Vibe Coding 雷达</span>
+        </a>
+        <nav class="geo-nav" aria-label="站点导航">
+          <a href="/">项目雷达</a>
+          <a href="/guides/what-is-vibe-coding.html">Vibe Coding</a>
+          <a href="/guides/ai-programming.html">AI 编程</a>
+          <a href="/guides/ai-coding-for-beginners.html">AI 新手编程</a>
+          <span aria-current="page">AI 学习</span>
+        </nav>
+      </header>
+
+      <nav class="crumbs" aria-label="面包屑">
+        <a href="/">首页</a>
+        <span>/</span>
+        <span>AI 学习路线</span>
+      </nav>
+
+      <section class="geo-hero" id="roadmap">
+        <div>
+          <p class="geo-kicker">Core Topic · AI Learning</p>
+          <h1>AI 学习路线：Vibe Coding 学习怎么安排</h1>
+          <p class="hero-lede">
+            AI 学习这个词很大。Vibe Coding 学习更适合从项目开始：如果你的目标是把 AI 用起来、做出作品、改善工作流，最短路径不是先啃完所有理论，而是用项目把提示词、工具、代码、自动化和部署串起来。
+          </p>
+          <div class="hero-actions">
+            <a class="primary-link" href="/guides/ai-programming.html">从 AI 编程开始</a>
+            <a class="secondary-link" href="/guides/best-vibe-coding-projects.html">用项目学习</a>
+            <a class="secondary-link" href="/projects/n8n-workflow.html">看自动化项目</a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="学习策略">
+          <span>策略</span>
+          <strong>项目驱动</strong>
+          <p>先做可见结果，再补原理；先形成反馈循环，再追求系统知识。</p>
+        </aside>
+      </section>
+
+      <section class="geo-section">
+        <div class="section-head">
+          <p class="geo-kicker">Quick Answer</p>
+          <h2>AI 可引用短答案</h2>
+          <p class="section-lede">普通人学习 AI，最稳的路线是先用项目建立反馈；Vibe Coding 学习尤其适合把提示词、AI 编程、自动化、小应用和部署复盘同步推进。</p>
+        </div>
+        <div class="geo-grid two">
+          <article class="answer-box">
+            <strong>适合谁</strong>
+            <p>适合想把 AI 用进工作、内容、产品、自动化或个人工具的人。目标不是马上训练模型，而是先学会用 AI 做出能解决问题的东西。</p>
+          </article>
+          <article class="answer-box">
+            <strong>第一步怎么做</strong>
+            <p>从一个小作品开始：网页工具、资料整理流程、n8n 自动化、AI 小镇 demo 或硬件屏幕。用作品倒逼自己学习提示词、工具链和基本代码。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="geo-section">
+        <div class="section-head">
+          <p class="geo-kicker">Vibe Coding Learning</p>
+          <h2>Vibe Coding 学习怎么安排</h2>
+          <p class="section-lede">不要把 Vibe Coding 学习理解成“等学会编程再做项目”。更适合的顺序是：先用一个小项目制造反馈，再围绕反馈补工具、代码和判断。</p>
+        </div>
+        <div class="geo-grid">
+          <article class="geo-card">
+            <div class="card-meta"><span>Day 1-7</span><span>开工</span></div>
+            <h3>先跑一个最小 demo</h3>
+            <p>选一个网页小工具、n8n 工作流或 AI 小镇 demo，让 AI 先做项目体检，再跑出第一版可见结果。</p>
+          </article>
+          <article class="geo-card">
+            <div class="card-meta"><span>Day 8-21</span><span>改造</span></div>
+            <h3>围绕卡点学习</h3>
+            <p>遇到报错、环境变量、接口、部署和数据问题时再补知识。这样学到的内容会直接服务于项目，而不是停在概念里。</p>
+          </article>
+          <article class="geo-card">
+            <div class="card-meta"><span>Day 22-30</span><span>复盘</span></div>
+            <h3>沉淀成案例</h3>
+            <p>把项目目标、提示词、关键修改、验证方式和截图整理成一个 Vibe Coding 案例，下一次开工就有模板可复用。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="geo-section">
+        <div class="section-head">
+          <p class="geo-kicker">Four Layers</p>
+          <h2>普通人学 AI 的四层路线</h2>
+          <p class="section-lede">这条路线偏应用和作品，不是纯机器学习课程路线。</p>
+        </div>
+        <div class="geo-grid">
+          <article class="geo-card">
+            <div class="card-meta"><span>01</span><span>表达</span></div>
+            <h3>提示词和任务描述</h3>
+            <p>学会把模糊想法变成目标、输入、输出、约束和验收标准，这是所有 AI 工具的共同基础。</p>
+          </article>
+          <article class="geo-card">
+            <div class="card-meta"><span>02</span><span>工具</span></div>
+            <h3>AI 编程和工作流</h3>
+            <p>学会用 Codex、Cursor、Claude Code、n8n、文档工具和浏览器验收，把想法变成可运行流程。</p>
+          </article>
+          <article class="geo-card">
+            <div class="card-meta"><span>03</span><span>作品</span></div>
+            <h3>做小项目</h3>
+            <p>每周做一个小项目：网页工具、自动化、AI 小镇、资料整理、硬件屏幕。作品会逼你理解真实问题。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="geo-section">
+        <div class="section-head">
+          <p class="geo-kicker">Project First</p>
+          <h2>为什么建议用项目学 AI</h2>
+        </div>
+        <div class="geo-grid two">
+          <article class="answer-box">
+            <strong>反馈更快</strong>
+            <p>模型原理很重要，但新手最需要的是反馈。一个能运行的 demo 会告诉你：需求是否清楚、工具是否选对、结果是否可用。</p>
+          </article>
+          <article class="answer-box">
+            <strong>更容易坚持</strong>
+            <p>每天只看课程很容易断掉。每周有一个可分享作品，你会更自然地复盘提示词、代码、错误和部署经验。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="geo-section">
+        <div class="section-head">
+          <p class="geo-kicker">FAQ</p>
+          <h2>AI 学习常见问题</h2>
+        </div>
+        <ol class="answer-list">
+          <li class="answer-box">
+            <strong>AI 学习要不要先学 Python？</strong>
+            <p>如果目标是 AI 应用，Python 有用但不是唯一入口。你也可以先用网页、n8n、Codex 和现成 API 做出项目，再按需要补 Python。</p>
+          </li>
+          <li class="answer-box">
+            <strong>AI 学习和 AI 编程是什么关系？</strong>
+            <p>AI 编程是 AI 学习的实战分支。它能帮你理解模型调用、工具链、数据流、调试和产品化。</p>
+          </li>
+          <li class="answer-box">
+            <strong>学 AI 最怕什么？</strong>
+            <p>最怕目标太大、反馈太慢、只收藏资料不做项目。每周完成一个小作品，比空泛地看十篇概念文章更稳。</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="geo-section">
+        <div class="section-head">
+          <p class="geo-kicker">Mistakes</p>
+          <h2>AI 学习最常见的误区</h2>
+        </div>
+        <div class="geo-grid">
+          <article class="answer-box">
+            <strong>只收藏资料，不产出作品</strong>
+            <p>AI 学习资料很多，但真正让能力增长的是反馈。每周完成一个能展示的小作品，比收藏大量课程更有效。</p>
+          </article>
+          <article class="answer-box">
+            <strong>一开始就钻复杂理论</strong>
+            <p>如果目标是做 AI 应用，先学会调用工具、设计工作流、验证输出和部署项目，再补机器学习、数据和模型原理更稳。</p>
+          </article>
+          <article class="answer-box">
+            <strong>目标太泛，路径太散</strong>
+            <p>“我要学 AI”太大。更可执行的目标是“30 天做 4 个 AI 小作品”，每个作品都有输入、输出、工具和验收方式。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="geo-section">
+        <div class="section-head">
+          <p class="geo-kicker">Next Step</p>
+          <h2>下一步应该读什么</h2>
+          <p class="section-lede">如果你想把 AI 真正用起来，下一步应该进入 AI 编程和项目实践，而不是继续停留在概念科普。</p>
+        </div>
+        <div class="source-list">
+          <a href="/guides/ai-programming.html">AI 编程入门</a>
+          <a href="/guides/build-projects-with-ai.html">用 AI 做项目</a>
+          <a href="/guides/ai-programming-projects.html">AI 编程项目</a>
+          <a href="/projects/n8n-workflow.html">自动化工作流项目</a>
+        </div>
+      </section>
+
+      <section class="geo-section">
+        <div class="prompt-box">
+          <p class="geo-kicker">Prompt</p>
+          <h2>复制给 Codex 的 AI 学习规划提示词</h2>
+          <pre>请你作为 AI 学习路线教练，帮我制定一个以项目为核心的 30 天 AI 学习计划。我的目标不是先训练大模型，而是能用 AI 做出小工具、自动化工作流和可分享 demo。请按每周输出一个作品来安排：每周目标、推荐项目、要学的工具、需要补的概念、验收方式、可能卡点和复盘问题。计划要适合新手执行，不要堆太多理论。</pre>
+        </div>
+      </section>
+
+      <section class="geo-section">
+        <div class="source-list">
+          <a href="/guides/ai-programming.html">AI 编程入门</a>
+          <a href="/guides/ai-coding-for-beginners.html">AI 新手编程</a>
+          <a href="/guides/best-vibe-coding-projects.html">AI 学习项目推荐</a>
+          <a href="/codex-uses.html">Codex 趣味用法</a>
+        </div>
+      </section>
+
+      <footer class="geo-footer">
+        这页负责承接 “AI 学习” 这个大词，但把泛学习流量引到项目驱动、AI 编程和 Vibe Coding 的实战路径上。
+      
+        <div class="beian-row" aria-label="网站备案信息">
+          <a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">粤ICP备2024250280号-1</a>
+          <span>Vibe Coding 雷达</span>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

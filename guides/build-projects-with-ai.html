@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="用 AI 做项目：从想法筛选、项目体检、MVP 拆解、AI 编程工具、调试验证到部署复盘，适合新手把想法变成可分享作品。"
+    />
+    <meta
+      name="keywords"
+      content="用 AI 做项目, AI 做项目, AI 项目实践, AI 编程项目, Vibe Coding 项目, Codex 做项目"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#f6f8fb" />
+    <title>用 AI 做项目 · Vibe Coding 雷达</title>
+    <link rel="canonical" href="https://radar.lyihub.com/guides/build-projects-with-ai.html" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Vibe Coding 雷达" />
+    <meta property="og:title" content="用 AI 做项目" />
+    <meta property="og:description" content="用 AI 做项目的实战路线：先选小题，再做项目体检，最后跑出可部署的最小 demo。" />
+    <meta property="og:url" content="https://radar.lyihub.com/guides/build-projects-with-ai.html" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,650;9..144,760&family=Noto+Sans+SC:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/geo.css?v=geo-seo-20260627" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "name": "用 AI 做项目",
+        "url": "https://radar.lyihub.com/guides/build-projects-with-ai.html",
+        "inLanguage": "zh-CN",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Vibe Coding 雷达",
+          "url": "https://radar.lyihub.com/"
+        },
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "用 AI 做项目第一步是什么？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "第一步是把想法缩成一个能验证的最小效果，明确用户、输入、输出、限制和验收方式。不要先从完整产品开始。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "哪些项目适合用 AI 做？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "适合选择反馈快、依赖少、容易验收的项目，例如网页工具、自动化工作流、AI 小镇 demo、PDF 工具、海报生成器和 ESP32 小屏幕。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "用 AI 做项目怎么避免烂尾？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "每一步都只推进一个可验证结果，遇到错误先读日志，不要重写全部代码。先拿到可分享 demo，再决定是否扩展功能。"
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#build">跳到正文</a>
+    <main class="geo-page">
+      <header class="geo-topbar">
+        <a class="geo-brand" href="/" aria-label="返回 Vibe Coding 雷达">
+          <span class="geo-mark" aria-hidden="true"></span>
+          <span>Vibe Coding 雷达</span>
+        </a>
+        <nav class="geo-nav" aria-label="专题导航">
+          <a href="/guides/ai-programming.html">AI 编程</a>
+          <span aria-current="page">用 AI 做项目</span>
+          <a href="/guides/ai-programming-projects.html">AI 编程项目</a>
+          <a href="/guides/vibe-coding-tutorial.html">Vibe Coding 教程</a>
+        </nav>
+      </header>
+
+      <nav class="crumbs" aria-label="面包屑">
+        <a href="/">首页</a>
+        <span>/</span>
+        <span>用 AI 做项目</span>
+      </nav>
+
+      <section class="geo-hero" id="build">
+        <div>
+          <p class="geo-kicker">Project Practice · AI</p>
+          <h1>用 AI 做项目</h1>
+          <p class="hero-lede">
+            用 AI 做项目的核心不是让 AI 一次性写完全部代码，而是用 AI 把想法拆成小步骤，并在每一步得到可验证结果。
+          </p>
+          <div class="hero-actions">
+            <a class="primary-link" href="/guides/ai-programming-projects.html">看项目类型</a>
+            <a class="secondary-link" href="/guides/how-to-use-codex.html">看 Codex 怎么用</a>
+            <a class="secondary-link" href="/guides/zero-to-ai-coding.html">零基础路线</a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="项目方法">
+          <span>方法</span>
+          <strong>MVP</strong>
+          <p>先做一个小切片，让项目能跑、能看、能分享。</p>
+        </aside>
+      </section>
+
+      <section class="geo-section">
+        <div class="section-head">
+          <p class="geo-kicker">Checklist</p>
+          <h2>用 AI 做项目的检查清单</h2>
+        </div>
+        <div class="geo-grid">
+          <article class="geo-card">
+            <div class="card-meta"><span>01</span><span>选题</span></div>
+            <h3>先判断值不值得做</h3>
+            <p>看项目是否有明确反馈、清楚来源、可控依赖和 2 小时内能跑出的最小效果。</p>
+          </article>
+          <article class="geo-card">
+            <div class="card-meta"><span>02</span><span>执行</span></div>
+            <h3>让 AI 小步推进</h3>
+            <p>每次只让 AI 完成一个动作：读文件、修一个错误、加一个按钮、跑一次测试、部署一次。</p>
+          </article>
+          <article class="geo-card">
+            <div class="card-meta"><span>03</span><span>复盘</span></div>
+            <h3>记录有效提示词</h3>
+            <p>把有效提示词、失败原因、依赖卡点和验收方式记录下来，第二个项目会明显更快。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="geo-section">
+        <div class="prompt-box">
+          <p class="geo-kicker">Prompt</p>
+          <h2>复制给 Codex 的项目实践提示词</h2>
+          <pre>请你帮我用 AI 完成一个小项目。先判断这个想法值不值得做，并把它拆成 2 小时内可验证的最小 demo。请输出：目标用户、最小功能、输入输出、依赖、可能卡点、第一步命令、验收方式和部署建议。执行时每次只改一个点，遇到错误先诊断日志。</pre>
+        </div>
+      </section>
+
+      <footer class="geo-footer">
+        这页面向搜索 “用 AI 做项目” 的用户，负责把项目实践需求导向 Vibe Coding 的最小 demo 方法。
+      
+        <div class="beian-row" aria-label="网站备案信息">
+          <a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">粤ICP备2024250280号-1</a>
+          <span>Vibe Coding 雷达</span>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

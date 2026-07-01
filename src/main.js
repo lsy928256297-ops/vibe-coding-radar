@@ -2691,11 +2691,6 @@ function render(options = {}) {
               <a class="secondary-link" href="${skillRadarUrl}">必装 Skill</a>
               <a class="secondary-link" href="${codexUsesUrl}">Codex 用法</a>
             </div>
-            <a class="skill-install-card" href="${skillRadarUrl}#vibe-coding-radar-skill" aria-label="查看 Vibe Coding Radar Skill">
-              <span>Installable Skill</span>
-              <strong>Vibe Coding Radar</strong>
-              <em>找项目 · 写开工提示词 · 配 Skill</em>
-            </a>
           </div>
           <aside class="hero-panel" aria-label="榜单概览">
             <div class="panel-head">

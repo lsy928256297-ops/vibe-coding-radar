@@ -37,7 +37,7 @@ const starTrack = {
 };
 
 const boardTabs = [...tracks, starTrack];
-const skillRadarUrl = "/skills.html?v=weekly-refresh-20260619";
+const skillRadarUrl = "/skills.html?v=weekly-refresh-20260702";
 const codexUsesUrl = "/codex-uses.html?v=cross-nav-20260619";
 
 const skillCatalog = {
@@ -55,13 +55,13 @@ const skillCatalog = {
   },
   "agent-skills": {
     name: "Addy Osmani Agent Skills",
-    signal: "工程 Skill",
+    signal: "工程 Skill · 68.4k stars",
     url: "https://github.com/addyosmani/agent-skills",
     description: "生产级 AI coding agent 工程 Skill，适合让 Codex 更稳定地读项目、改代码、跑验收。",
   },
   "skillspector": {
     name: "NVIDIA SkillSpector",
-    signal: "安全扫描",
+    signal: "安全扫描 · +1,387/7d",
     url: "https://github.com/NVIDIA/SkillSpector",
     description: "安装第三方 Skill 前先扫描危险命令、可疑网络请求和高风险权限。",
   },
@@ -85,7 +85,7 @@ const skillCatalog = {
   },
   "shadcn-skill": {
     name: "shadcn/ui Skill",
-    signal: "常用组件",
+    signal: "常用组件 · 117.8k stars",
     url: "https://github.com/shadcn-ui/ui/blob/main/skills/shadcn/SKILL.md",
     description: "快速把按钮、表单、弹窗、表格等 Web App 常用组件接进项目。",
   },
@@ -103,7 +103,7 @@ const skillCatalog = {
   },
   "guizang-ppt": {
     name: "归藏 PPT Skill",
-    signal: "中文爆款视觉",
+    signal: "中文爆款视觉 · +887/7d",
     url: "https://github.com/op7418/guizang-ppt-skill",
     description: "适合把项目做成发布会式网页 PPT、长图或可分享的视觉说明。",
   },
@@ -115,13 +115,13 @@ const skillCatalog = {
   },
   "opencli": {
     name: "OpenCLI",
-    signal: "真实网页操作",
+    signal: "真实网页操作 · +643/7d",
     url: "https://github.com/jackwener/opencli",
     description: "把网页、平台和公开 API 变成 AI 可以稳定调用的命令行工具。",
   },
   "lark-cli": {
     name: "飞书 / Lark CLI",
-    signal: "中文团队工作流",
+    signal: "中文团队工作流 · +342/7d",
     url: "https://github.com/larksuite/cli",
     description: "适合会议纪要、文档、多维表格、日历和任务流这类中文办公项目。",
   },

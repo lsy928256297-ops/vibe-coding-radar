@@ -257,6 +257,8 @@ h2 {
 .category-jump a:focus-visible,
 .skill-card a:hover,
 .skill-card a:focus-visible,
+.copy-skill-prompt:hover,
+.copy-skill-prompt:focus-visible,
 .directory-strip a:hover,
 .directory-strip a:focus-visible,
 .skills-brand:focus-visible {
@@ -301,6 +303,67 @@ h2 {
   padding: 0 14px;
   text-align: center;
   text-decoration: none;
+}
+
+.skill-actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(94px, max-content);
+  gap: 10px;
+  align-items: stretch;
+  margin-top: auto;
+}
+
+.copy-skill-prompt,
+.skill-source-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 40px;
+  border: 1px solid color-mix(in srgb, var(--section-color, var(--acid)) 42%, var(--border));
+  font: inherit;
+  font-size: 0.86rem;
+  font-weight: 950;
+  line-height: 1.15;
+  padding: 0 12px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.copy-skill-prompt {
+  background: var(--section-color, var(--acid));
+  color: #030404;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.copy-skill-prompt.is-copied {
+  border-color: #62e8a4;
+  background: #62e8a4;
+}
+
+.skill-source-link {
+  background: rgba(255, 255, 255, 0.035);
+  color: var(--soft);
+}
+
+.radar-install-actions {
+  grid-template-columns: 1fr;
+  margin-top: 18px;
+}
+
+.copy-skill-prompt-hero {
+  min-height: 44px;
+  background: var(--acid);
+}
+
+.radar-install-actions .scoreboard-link-secondary {
+  width: 100%;
+  min-height: 38px;
+  margin-top: 0;
+  border-color: rgba(228, 242, 34, 0.5);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--soft);
 }
 
 .skills-scoreboard span,
@@ -704,6 +767,14 @@ h2 {
   text-decoration: none;
 }
 
+.skill-card .skill-source-link {
+  min-height: 40px;
+  border-color: color-mix(in srgb, var(--section-color) 30%, var(--border));
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--soft);
+  padding: 0 12px;
+}
+
 .directory-strip {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -772,6 +843,10 @@ h2 {
   .skills-page {
     width: min(100% - 28px, 1200px);
     padding-top: 16px;
+  }
+
+  .skill-actions {
+    grid-template-columns: 1fr;
   }
 
   .skills-topbar,

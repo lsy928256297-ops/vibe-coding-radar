@@ -4,10 +4,17 @@
   <link href="https://radar.lyihub.com/feed.xml" rel="self" />
   <link href="https://radar.lyihub.com/" />
   <id>https://radar.lyihub.com/</id>
-  <updated>2026-06-30T16:47:21+08:00</updated>
+  <updated>2026-07-08T02:45:15+08:00</updated>
   <author>
     <name>Vibe Coding 雷达</name>
   </author>
+  <entry>
+    <title>本周项目榜与必装 Skill 榜更新</title>
+    <link href="https://radar.lyihub.com/" />
+    <id>https://radar.lyihub.com/#weekly-refresh-20260708</id>
+    <updated>2026-07-08T02:45:15+08:00</updated>
+    <summary>刷新首页“增长最快的 GitHub 项目”和必装 Skill 页：本周明星项目包含 Strix、agency-agents、caveman、codebase-memory-mcp、Meetily 等；新星 Skill / agent 工具按近 7 天增长、公开 star 和新手可用性重排。</summary>
+  </entry>
   <entry>
     <title>Vibe Coding 学习 / 项目 / 案例关键词增强</title>
     <link href="https://radar.lyihub.com/guides/best-vibe-coding-projects.html" />

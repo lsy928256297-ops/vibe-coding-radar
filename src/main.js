@@ -1857,40 +1857,43 @@ const githubStarProjects = [
 
 const starterOptions = {
   time: [
-    { id: "quick", label: "今天 2 小时", description: "优先推荐马上能跑起来的轻量项目。" },
-    { id: "weekend", label: "周末 1-2 天", description: "平衡完成度和惊喜感。" },
-    { id: "week", label: "一周慢慢做", description: "允许更多集成、部署和打磨。" },
+    { id: "quick", label: "2 小时见效", description: "优先推荐马上能跑起来的轻量项目。" },
+    { id: "weekend", label: "周末完成", description: "平衡完成度和惊喜感。" },
+    { id: "week", label: "一周打磨", description: "允许更多集成、部署和打磨。" },
+    { id: "long", label: "长期迭代", description: "适合做成长期使用的小系统。" },
   ],
   goal: [
-    { id: "fun", label: "给朋友演示", description: "偏好互动、视觉、游戏和 wow moment。" },
-    { id: "useful", label: "自己日常用", description: "偏好工作流、资料整理和效率工具。" },
-    { id: "hardware", label: "动手搓设备", description: "偏好有真实设备反馈的硬件项目。" },
-    { id: "frontier", label: "追前沿动态", description: "偏好本周增长最快的新鲜 GitHub 项目。" },
+    { id: "show", label: "拿来演示", description: "偏好互动、视觉、游戏和 wow moment。" },
+    { id: "personal", label: "日常自用", description: "偏好个人资料、习惯和家庭场景。" },
+    { id: "work", label: "工作提效", description: "偏好文档、资料整理、流程和效率工具。" },
+    { id: "explore", label: "技术探索", description: "偏好本周增长快、技术味更强的新鲜项目。" },
   ],
-  skill: [
+  medium: [
+    { id: "web", label: "网页互动", description: "偏好浏览器、游戏、可视化和可分享界面。" },
+    { id: "data", label: "文档/数据", description: "偏好 PDF、表格、知识库、搜索和资料整理。" },
+    { id: "agent", label: "AI Agent", description: "偏好模型、RAG、自动化和工具调用。" },
+    { id: "device", label: "硬件设备", description: "偏好 ESP32、树莓派、传感器和实体反馈。" },
+  ],
+  comfort: [
     { id: "beginner", label: "刚开始", description: "更看重友好度、步骤清晰和少踩坑。" },
-    { id: "builder", label: "会一点", description: "可以接受前端、脚本和 API 集成。" },
-    { id: "tinkerer", label: "愿意折腾", description: "愿意调环境、接硬件或做复杂流程。" },
-  ],
-  hardware: [
-    { id: "none", label: "不买硬件", description: "只推荐网页、软件和本地工具。" },
-    { id: "small", label: "几十块可以", description: "可以接受 ESP32、传感器和小屏。" },
-    { id: "ready", label: "已经有设备", description: "可以推荐树莓派、打印机、智能家居。" },
+    { id: "deps", label: "能装依赖", description: "可以接受本地环境、包管理和简单部署。" },
+    { id: "api", label: "能接 API", description: "可以处理账号、密钥、接口和数据库。" },
+    { id: "hardware", label: "能折腾硬件", description: "愿意接线、烧录、配网和排查设备。" },
   ],
 };
 
 const starterGroupLabels = {
   time: "时间",
   goal: "目标",
-  skill: "熟练度",
-  hardware: "硬件",
+  medium: "形式",
+  comfort: "舒适区",
 };
 
 const starterGroupHints = {
   time: "这次准备投入多久",
   goal: "做出来主要给谁用",
-  skill: "你愿意折腾到哪一步",
-  hardware: "是否接受买点小东西",
+  medium: "想要什么形态",
+  comfort: "你愿意折腾到哪一步",
 };
 
 const starterGroupStyles = {
@@ -1902,9 +1905,10 @@ const starterGroupStyles = {
     tone: "#225CFF",
     label: { x: 50, y: 31 },
     positions: [
-      { x: 27, y: 23 },
-      { x: 52, y: 18 },
-      { x: 76, y: 26 },
+      { x: 23, y: 24 },
+      { x: 43, y: 17 },
+      { x: 62, y: 18 },
+      { x: 79, y: 27 },
     ],
   },
   goal: {
@@ -1915,13 +1919,13 @@ const starterGroupStyles = {
     tone: "#18A058",
     label: { x: 30, y: 55 },
     positions: [
-      { x: 22, y: 38 },
-      { x: 14, y: 53 },
-      { x: 24, y: 68 },
-      { x: 49, y: 72 },
+      { x: 22, y: 36 },
+      { x: 13, y: 51 },
+      { x: 23, y: 66 },
+      { x: 43, y: 74 },
     ],
   },
-  skill: {
+  medium: {
     x: 50,
     y: 50,
     width: 100,
@@ -1929,12 +1933,13 @@ const starterGroupStyles = {
     tone: "#FF6A3D",
     label: { x: 70, y: 55 },
     positions: [
-      { x: 77, y: 38 },
-      { x: 86, y: 53 },
-      { x: 72, y: 67 },
+      { x: 76, y: 36 },
+      { x: 82, y: 51 },
+      { x: 74, y: 66 },
+      { x: 57, y: 74 },
     ],
   },
-  hardware: {
+  comfort: {
     x: 50,
     y: 50,
     width: 100,
@@ -1942,9 +1947,10 @@ const starterGroupStyles = {
     tone: "#111827",
     label: { x: 50, y: 71 },
     positions: [
-      { x: 29, y: 88 },
-      { x: 54, y: 90 },
-      { x: 77, y: 86 },
+      { x: 22, y: 85 },
+      { x: 43, y: 91 },
+      { x: 63, y: 91 },
+      { x: 74, y: 84 },
     ],
   },
 };
@@ -1958,9 +1964,9 @@ const starterLabels = Object.fromEntries(
 
 const starterState = {
   time: "weekend",
-  goal: "fun",
-  skill: "beginner",
-  hardware: "none",
+  goal: "show",
+  medium: "web",
+  comfort: "beginner",
 };
 
 const state = {
@@ -1968,6 +1974,11 @@ const state = {
   metric: "wow",
   query: "",
 };
+
+const projectLikeCooldownMs = 10 * 60 * 1000;
+const projectLikeStoreKey = "vibe-radar-project-likes-v1";
+const projectLikeState = loadProjectLikeState();
+let projectLikesApiAvailable = true;
 
 const boardThemes = {
   all: {
@@ -2033,6 +2044,156 @@ function cancelPendingSearchRender() {
   if (!searchRenderTimer) return;
   window.clearTimeout(searchRenderTimer);
   searchRenderTimer = null;
+}
+
+function loadProjectLikeState() {
+  try {
+    const stored = window.localStorage?.getItem(projectLikeStoreKey);
+    if (!stored) return { counts: {}, likedAt: {} };
+    const parsed = JSON.parse(stored);
+    return {
+      counts: normalizeLikeMap(parsed.counts),
+      likedAt: normalizeLikeMap(parsed.likedAt),
+    };
+  } catch {
+    return { counts: {}, likedAt: {} };
+  }
+}
+
+function normalizeLikeMap(value) {
+  if (!value || typeof value !== "object") return {};
+  return Object.fromEntries(
+    Object.entries(value)
+      .map(([key, count]) => [key, Number(count)])
+      .filter(([key, count]) => key && Number.isFinite(count) && count >= 0)
+  );
+}
+
+function saveProjectLikeState() {
+  try {
+    window.localStorage?.setItem(projectLikeStoreKey, JSON.stringify(projectLikeState));
+  } catch {
+    // Local storage can be unavailable in private or embedded browsers; the UI still works for this session.
+  }
+}
+
+function getProjectLikeCount(projectId) {
+  return Math.max(0, Math.floor(Number(projectLikeState.counts[projectId]) || 0));
+}
+
+function setProjectLikeCount(projectId, count) {
+  const normalized = Math.max(0, Math.floor(Number(count) || 0));
+  projectLikeState.counts[projectId] = normalized;
+  saveProjectLikeState();
+  return normalized;
+}
+
+function canLikeProject(projectId, now = Date.now()) {
+  const lastLikedAt = Number(projectLikeState.likedAt[projectId]) || 0;
+  if (!lastLikedAt) return true;
+  return now - lastLikedAt >= projectLikeCooldownMs;
+}
+
+function recordProjectLike(projectId, now = Date.now()) {
+  if (!canLikeProject(projectId, now)) return getProjectLikeCount(projectId);
+  projectLikeState.likedAt[projectId] = now;
+  projectLikeState.counts[projectId] = getProjectLikeCount(projectId) + 1;
+  saveProjectLikeState();
+  return getProjectLikeCount(projectId);
+}
+
+function renderLikeButton(project, options = {}) {
+  const count = getProjectLikeCount(project.id);
+  const liked = !canLikeProject(project.id);
+  return `
+    <button
+      type="button"
+      class="like-button ${liked ? "liked" : ""} ${options.compact ? "like-button-compact" : ""}"
+      data-like-id="${project.id}"
+      aria-label="给${escapeHtml(project.name)}点赞"
+      aria-pressed="${liked}"
+      aria-disabled="${liked}"
+    >
+      <span>${liked ? "已赞" : "赞"}</span>
+      <strong>${formatCount(count)}</strong>
+    </button>
+  `;
+}
+
+function updateLikeButtons(projectId) {
+  const project = projectById(projectId);
+  if (!project) return;
+  document.querySelectorAll(`[data-like-id="${projectId}"]`).forEach((button) => {
+    const liked = !canLikeProject(projectId);
+    button.classList.toggle("liked", liked);
+    button.setAttribute("aria-pressed", liked ? "true" : "false");
+    button.setAttribute("aria-disabled", liked ? "true" : "false");
+    button.innerHTML = `<span>${liked ? "已赞" : "赞"}</span><strong>${formatCount(getProjectLikeCount(projectId))}</strong>`;
+  });
+}
+
+async function hydrateProjectLikes() {
+  if (!projectLikesApiAvailable || typeof window.fetch !== "function") return;
+  try {
+    const response = await window.fetch("/api/likes", {
+      headers: { Accept: "application/json" },
+    });
+    if (!response.ok) {
+      projectLikesApiAvailable = false;
+      return;
+    }
+    const data = await response.json();
+    const counts = normalizeLikeMap(data.counts);
+    Object.entries(counts).forEach(([projectId, count]) => {
+      projectLikeState.counts[projectId] = count;
+    });
+    saveProjectLikeState();
+    render({ preserveFocus: true });
+  } catch {
+    projectLikesApiAvailable = false;
+  }
+}
+
+async function syncProjectLike(projectId) {
+  if (!projectLikesApiAvailable || typeof window.fetch !== "function") return;
+  try {
+    const response = await window.fetch("/api/likes", {
+      body: JSON.stringify({ projectId }),
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    });
+    if (response.status === 429) {
+      const data = await response.json();
+      if (Number.isFinite(Number(data.count))) {
+        setProjectLikeCount(projectId, data.count);
+        updateLikeButtons(projectId);
+      }
+      return;
+    }
+    if (!response.ok) {
+      projectLikesApiAvailable = false;
+      return;
+    }
+    const data = await response.json();
+    if (Number.isFinite(Number(data.count))) {
+      setProjectLikeCount(projectId, data.count);
+      updateLikeButtons(projectId);
+    }
+  } catch {
+    projectLikesApiAvailable = false;
+  }
+}
+
+function handleProjectLike(projectId) {
+  const countBefore = getProjectLikeCount(projectId);
+  const countAfter = recordProjectLike(projectId);
+  updateLikeButtons(projectId);
+  if (countAfter > countBefore) {
+    syncProjectLike(projectId);
+  }
 }
 
 function hydrateStateFromUrl() {
@@ -2259,6 +2420,87 @@ function projectById(id) {
   return recommendationPool().find((project) => project.id === id);
 }
 
+const starterProfileCache = new Map();
+
+function starterProjectProfile(project) {
+  if (starterProfileCache.has(project.id)) return starterProfileCache.get(project.id);
+
+  const text = projectText(project);
+  const scale = projectScale(project).value;
+  const time = new Set();
+  const goals = new Set();
+  const media = new Set();
+  const comfort = new Set();
+
+  const isHardware =
+    project.track === "hardware" ||
+    /esp32|raspberry|pi |mqtt|zigbee|lora|sdr|固件|烧录|传感器|硬件|3d 打印|打印机|摄像头|键盘|灯带|门铃|网关|home assistant|klipper|octoprint|tasmota|esphome|qmk|zmk|kmk/.test(text);
+  const isAgent =
+    /ai |agent|llm|rag|openai|模型|大模型|mcp|workflow|自动化|webhook|prompt|提示词|记忆|知识图谱|工具调用|语音|tts|voice|克隆|问答|检索|助手|总结/.test(text);
+  const isData =
+    /pdf|ocr|csv|rss|表格|数据库|数据|文档|知识库|资料|搜索|合同|票据|发票|账单|财务|订阅|收藏|笔记|wiki|sop|crm|后台|监控|状态页|周报|报表|密码|同步/.test(text);
+  const isWeb =
+    project.track === "fun" ||
+    /网页|浏览器|webgl|webxr|canvas|react|three|pixi|phaser|p5|游戏|海报|白板|编辑器|可视化|图表|音频|音乐|视频|短片|3d|粒子|动画|组件|页面|站|面板|看板|仪表盘|分享|导出/.test(text);
+
+  if (isWeb) media.add("web");
+  if (isData) media.add("data");
+  if (isAgent) media.add("agent");
+  if (isHardware) media.add("device");
+  if (!media.size) media.add(project.track === "stars" ? "agent" : "web");
+
+  if (project.track === "fun" || /演示|朋友|游戏|海报|音乐|视觉|3d|视频|短片|小镇|手势|节奏|房间|展厅|流体|动画|涂鸦|弹球|像素|粒子|封面|demo/.test(text)) {
+    goals.add("show");
+  }
+  if (/个人|私人|家庭|日常|相册|财务|订阅|食谱|备忘|收藏|密码|同步|日历|天气|房间|植物|空气|桌面|家电|镜子|护城河/.test(text)) {
+    goals.add("personal");
+  }
+  if (project.track === "useful" || /团队|sop|工作流|周报|合同|票据|监控|crm|后台|数据库|文档|知识库|运营|状态页|商单|排期|资料|搜索|工具箱|自动流水线/.test(text)) {
+    goals.add("work");
+  }
+  if (project.track === "stars" || /agent|mcp|llm|rag|github|ai |模型|代码库|cybersecurity|安全|开源|图谱|前沿|coding assistant|设计身份/.test(text)) {
+    goals.add("explore");
+  }
+  if (!goals.size) goals.add(project.track === "hardware" ? "personal" : "show");
+
+  if (project.easy >= 78 && scale <= 2.5 && !isHardware) comfort.add("beginner");
+  if (project.easy >= 62 || /本地|网页|浏览器|react|node|python|docker|部署|导入|上传|下载|配置/.test(text)) comfort.add("deps");
+  if (/api|key|openai|llm|rag|agent|模型|webhook|搜索|rss|推送|权限|数据库|supabase|auth|登录|oauth|mcp|行情|新闻|邮件/.test(text)) comfort.add("api");
+  if (isHardware) comfort.add("hardware");
+  if (!comfort.size) comfort.add("deps");
+
+  if (project.easy >= 82 && scale <= 2) time.add("quick");
+  if (project.easy >= 66 && scale <= 3) time.add("weekend");
+  if (project.useful >= 78 || project.wow >= 86 || scale >= 2.5 || isAgent || isData || isHardware) time.add("week");
+  if (project.track === "stars" || isHardware || scale >= 3.5 || /团队|平台|系统|长期|全屋|家庭|打印|自托管|知识库|数据库|工作台|中枢/.test(text)) {
+    time.add("long");
+  }
+  if (!time.size) time.add("weekend");
+
+  const primaryMedium = ["device", "agent", "data", "web"].find((medium) => media.has(medium)) ?? "web";
+  const profile = {
+    comfort,
+    goals,
+    media,
+    primaryMedium,
+    scale,
+    time,
+  };
+  starterProfileCache.set(project.id, profile);
+  return profile;
+}
+
+function starterMatchScore(set, selected, hit, miss = 0) {
+  return set.has(selected) ? hit : miss;
+}
+
+function starterDiversityKey(project) {
+  const profile = starterProjectProfile(project);
+  if (project.track === "hardware") return "device";
+  if (project.track === "stars") return "frontier";
+  return profile.primaryMedium;
+}
+
 function starterRecommendations() {
   const scored = recommendationPool()
     .map((project) => ({
@@ -2269,47 +2511,84 @@ function starterRecommendations() {
 
   const picked = [];
   const trackCounts = {};
-  for (const item of scored) {
+  const mediumCounts = {};
+
+  const canPick = (item, strict = true) => {
     const track = item.project.track;
-    if ((trackCounts[track] ?? 0) >= 2) continue;
+    const diversityKey = starterDiversityKey(item.project);
+    const trackLimit = starterState.goal === "explore" && track === "stars" ? 2 : 1;
+    const mediumLimit = starterState.medium === diversityKey ? 2 : 1;
+    if ((trackCounts[track] ?? 0) >= (strict ? trackLimit : 2)) return false;
+    if (strict && (mediumCounts[diversityKey] ?? 0) >= mediumLimit) return false;
+    return true;
+  };
+
+  const addPick = (item) => {
+    const track = item.project.track;
+    const diversityKey = starterDiversityKey(item.project);
     picked.push(item);
     trackCounts[track] = (trackCounts[track] ?? 0) + 1;
+    mediumCounts[diversityKey] = (mediumCounts[diversityKey] ?? 0) + 1;
+  };
+
+  for (const item of scored) {
+    if (!canPick(item, true)) continue;
+    addPick(item);
     if (picked.length === 3) break;
   }
+
+  if (picked.length < 3) {
+    for (const item of scored) {
+      if (picked.some((pickedItem) => pickedItem.project.id === item.project.id)) continue;
+      if (!canPick(item, false)) continue;
+      addPick(item);
+      if (picked.length === 3) break;
+    }
+  }
+
   return picked;
 }
 
 function starterScore(project) {
-  let score = project.easy * 1.05 + project.wow * 0.45 + project.useful * 0.45;
+  const profile = starterProjectProfile(project);
+  let score = project.easy * 0.58 + project.wow * 0.32 + project.useful * 0.34;
 
-  if (starterState.time === "quick") score += project.easy * 0.85;
-  if (starterState.time === "weekend") score += (project.easy + project.wow) * 0.35;
-  if (starterState.time === "week") score += project.useful * 0.55 + project.wow * 0.25;
+  score += starterMatchScore(profile.time, starterState.time, 54, -8);
+  score += starterMatchScore(profile.goals, starterState.goal, 68, -14);
+  score += starterMatchScore(profile.media, starterState.medium, 82, -18);
+  score += starterMatchScore(profile.comfort, starterState.comfort, 56, -10);
 
-  if (starterState.goal === "fun") score += project.wow * 1.05 + (project.track === "fun" ? 40 : 0);
-  if (starterState.goal === "useful") {
-    score += project.useful * 1.05 + (project.track === "useful" ? 42 : 0);
-  }
-  if (starterState.goal === "hardware") {
-    score += project.track === "hardware" ? 90 : -35;
-  }
-  if (starterState.goal === "frontier") {
-    score += project.track === "stars" ? 96 : 0;
-    score += project.weeklyStars ? Math.min(46, project.weeklyStars / 420) : 0;
-  }
+  if (starterState.time === "quick") score += project.easy * 0.56 - profile.scale * 12;
+  if (starterState.time === "weekend") score += project.easy * 0.24 + project.wow * 0.32;
+  if (starterState.time === "week") score += project.useful * 0.42 + project.wow * 0.2;
+  if (starterState.time === "long") score += project.useful * 0.52 + profile.scale * 10;
 
-  if (starterState.skill === "beginner") score += project.easy * 0.75;
-  if (starterState.skill === "builder") score += project.useful * 0.35 + project.wow * 0.25;
-  if (starterState.skill === "tinkerer") score += project.wow * 0.45 + (project.track === "hardware" ? 26 : 0);
-
-  if (starterState.hardware === "none" && project.track === "hardware") score -= 140;
-  if (starterState.hardware === "small" && project.track === "hardware") score += 28;
-  if (starterState.hardware === "ready" && project.track === "hardware") score += 62;
-  if (starterState.hardware !== "none" && starterState.goal !== "hardware" && project.track === "hardware") {
-    score += 12;
+  if (starterState.goal === "show") score += project.wow * 0.62 + (project.track === "fun" ? 36 : 0);
+  if (starterState.goal === "personal") score += project.useful * 0.48 + (project.track === "useful" ? 20 : 0);
+  if (starterState.goal === "work") score += project.useful * 0.7 + (project.track === "useful" ? 42 : 0);
+  if (starterState.goal === "explore") {
+    score += project.track === "stars" ? 82 : 0;
+    score += project.weeklyStars ? Math.min(54, project.weeklyStars / 390) : 0;
+    score += profile.comfort.has("api") || profile.media.has("agent") ? 18 : 0;
+  } else if (project.track === "stars") {
+    score -= 20;
   }
 
-  score += Math.max(0, 31 - project.rank) * 0.35;
+  if (starterState.medium === "device") {
+    score += project.track === "hardware" ? 96 : -34;
+  } else if (project.track === "hardware") {
+    score -= starterState.comfort === "hardware" ? 24 : 118;
+  }
+
+  if (starterState.comfort === "beginner") {
+    score += project.easy * 0.48 - profile.scale * 14;
+    if (project.track === "stars") score -= 14;
+  }
+  if (starterState.comfort === "deps") score += project.easy * 0.22 + project.useful * 0.18;
+  if (starterState.comfort === "api") score += profile.comfort.has("api") ? project.useful * 0.26 : -16;
+  if (starterState.comfort === "hardware") score += project.track === "hardware" ? 58 : profile.scale * 4;
+
+  score += Math.max(0, 31 - project.rank) * 0.14;
   return score;
 }
 
@@ -2317,13 +2596,14 @@ function starterReason(project) {
   const track = trackById(project.track);
   const timeText = starterLabels.time[starterState.time];
   const goalText = starterLabels.goal[starterState.goal];
+  const mediumText = starterLabels.medium[starterState.medium];
   if (project.track === "stars") {
-    return `适合想“${goalText}”的新手：本周增长 +${formatCount(project.weeklyStars)} stars，先复刻一个最小使用场景就能摸到前沿脉搏。`;
+    return `适合“${goalText}”：本周增长 +${formatCount(project.weeklyStars)} stars，先复刻一个最小使用场景就能摸到前沿脉搏。`;
   }
   if (project.track === "hardware") {
-    return `适合“${timeText}”动手：反馈来自真实设备，按 MVP 做出一个可见/可测的小结果。`;
+    return `适合“${timeText}”动手：${mediumText}的反馈更直接，按 MVP 做出一个可见/可测的小结果。`;
   }
-  return `适合“${timeText}”开工：${track.short}方向匹配“${goalText}”，先把 MVP 做成可演示版本。`;
+  return `适合“${timeText}”开工：${track.short}方向匹配“${goalText}”，先做一个${mediumText}形态的 MVP。`;
 }
 
 const projectTagOverrides = {
@@ -2991,8 +3271,11 @@ function renderStarterResult(project, score, index) {
     <article class="starter-result-card" style="--track: ${track.accent}">
       <div class="starter-result-top">
         <span>#${index + 1}</span>
-        <em>${track.title}</em>
-        <strong>${Math.round(score)}</strong>
+        <em>${track.short}</em>
+        <div class="starter-result-score-like">
+          <strong>${Math.round(score)}</strong>
+          ${renderLikeButton(project, { compact: true })}
+        </div>
       </div>
       <h3>${project.name}</h3>
       <p>${starterReason(project)}</p>
@@ -3102,6 +3385,7 @@ function projectCard(project, index, options = {}) {
       <div class="card-topline">
         <span class="rank">#${displayRank}</span>
         <span class="track-label">${track.title}</span>
+        ${renderLikeButton(project, { compact: options.compact })}
         <span class="grade">${scoreLabel(project)}</span>
       </div>
       <h3>${project.name}</h3>
@@ -3243,6 +3527,12 @@ function wireEvents() {
   document.querySelectorAll("[data-plan-id]").forEach((button) => {
     button.addEventListener("click", () => {
       openPlanDialog(button.dataset.planId);
+    });
+  });
+
+  document.querySelectorAll("[data-like-id]").forEach((button) => {
+    button.addEventListener("click", () => {
+      handleProjectLike(button.dataset.likeId);
     });
   });
 
@@ -3527,3 +3817,4 @@ function startRadar() {
 
 hydrateStateFromUrl();
 render();
+hydrateProjectLikes();

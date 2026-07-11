@@ -849,8 +849,8 @@ h2 {
   align-items: center;
 }
 
-.starter-result-top span,
-.starter-result-top strong {
+.starter-result-top > span,
+.starter-result-score-like > strong {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -860,22 +860,34 @@ h2 {
   font-weight: 900;
 }
 
-.starter-result-top span {
+.starter-result-top > span {
   background: var(--track);
   color: white;
 }
 
-.starter-result-top strong {
+.starter-result-score-like {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  min-width: 0;
+}
+
+.starter-result-score-like > strong {
   background: var(--acid);
   color: var(--ink);
 }
 
 .starter-result-top em {
+  overflow: hidden;
   color: var(--track);
   font-size: 0.74rem;
   font-style: normal;
   font-weight: 900;
+  min-width: 2.5em;
+  text-overflow: ellipsis;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .starter-result-card h3 {
@@ -1440,6 +1452,54 @@ a:focus-visible {
   font-weight: 900;
   line-height: 1;
   white-space: nowrap;
+}
+
+.like-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 30px;
+  border: 1px solid var(--ink);
+  background: white;
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 900;
+  line-height: 1;
+  padding: 0 9px;
+  white-space: nowrap;
+  box-shadow: inset 0 -2px 0 color-mix(in srgb, var(--track, var(--acid)) 18%, transparent);
+}
+
+.like-button span {
+  font-size: 0.72rem;
+}
+
+.like-button strong {
+  font-size: 0.84rem;
+}
+
+.like-button:hover,
+.like-button:focus-visible {
+  background: color-mix(in srgb, var(--track, var(--acid)) 9%, white);
+  outline: 2px solid color-mix(in srgb, var(--track, var(--ink)) 24%, transparent);
+  outline-offset: 2px;
+}
+
+.like-button.liked,
+.like-button[aria-disabled="true"] {
+  background: var(--acid);
+  color: var(--ink);
+  cursor: default;
+  opacity: 1;
+  box-shadow: inset 0 -2px 0 rgba(17, 24, 39, 0.12);
+}
+
+.like-button-compact,
+.project-card-compact .like-button {
+  min-height: 28px;
+  padding: 0 8px;
 }
 
 .project-card h3 {

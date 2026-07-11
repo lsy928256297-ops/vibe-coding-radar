@@ -129,7 +129,7 @@ const authorityPages = [
       "下一步应该读什么",
       "Vibe Coding 学习怎么安排",
     ],
-    dateModified: "2026-06-30",
+    dateModified: "2026-07-12",
   },
 ];
 
@@ -137,22 +137,66 @@ const secondLayerKeywordPages = [
   {
     file: "guides/ai-learning-roadmap.html",
     requiredText: ["Vibe Coding 学习", "AI 学习路线：Vibe Coding 学习怎么安排"],
+    lastmod: "2026-07-12",
   },
   {
     file: "guides/best-vibe-coding-projects.html",
     requiredText: ["Vibe Coding 项目", "Vibe Coding 案例", "Vibe Coding 项目怎么选", "Vibe Coding 案例：三条路线"],
+    lastmod: "2026-07-12",
   },
   {
     file: "projects/ai-town.html",
     requiredText: ["Vibe Coding 案例", "Vibe Coding 案例定位", "Vibe Coding 项目"],
+    lastmod: "2026-07-12",
   },
   {
     file: "projects/n8n-workflow.html",
     requiredText: ["Vibe Coding 案例", "Vibe Coding 案例定位", "Vibe Coding 项目"],
+    lastmod: "2026-07-12",
   },
   {
     file: "projects/esp32-eink-calendar.html",
     requiredText: ["Vibe Coding 案例", "Vibe Coding 案例定位", "Vibe Coding 项目"],
+    lastmod: "2026-07-12",
+  },
+];
+
+const caseEvidencePages = [
+  {
+    file: "projects/ai-town.html",
+    requiredText: [
+      "案例证据卡",
+      "一手来源",
+      "最小验收",
+      "局限与边界",
+      "https://convex.dev/ai-town",
+      '"dateModified": "2026-07-12"',
+      '"citation"',
+    ],
+  },
+  {
+    file: "projects/n8n-workflow.html",
+    requiredText: [
+      "案例证据卡",
+      "一手来源",
+      "最小验收",
+      "局限与边界",
+      "https://docs.n8n.io/",
+      '"dateModified": "2026-07-12"',
+      '"citation"',
+    ],
+  },
+  {
+    file: "projects/esp32-eink-calendar.html",
+    requiredText: [
+      "案例证据卡",
+      "一手来源",
+      "最小验收",
+      "局限与边界",
+      "https://github.com/Xinyuan-LilyGO/LilyGo-T5-Epaper-Series",
+      '"dateModified": "2026-07-12"',
+      '"citation"',
+    ],
   },
 ];
 
@@ -197,6 +241,8 @@ const homeHiddenPages = [
 
 assertIncludes(robots, "User-agent: OAI-SearchBot", "robots.txt");
 assertIncludes(robots, "User-agent: ChatGPT-User", "robots.txt");
+assertIncludes(robots, "User-agent: Google-Extended", "robots.txt");
+assertIncludes(robots, "User-agent: Bytespider", "robots.txt");
 assertIncludes(robots, `Sitemap: ${canonicalHost}/sitemap.xml`, "robots.txt");
 assertIncludes(robots, `Sitemap: ${canonicalHost}/feed.xml`, "robots.txt");
 
@@ -246,7 +292,18 @@ for (const page of authorityPages) {
 for (const page of secondLayerKeywordPages) {
   const html = read(page.file);
   assertIncludes(sitemap, `<loc>${canonicalHost}/${page.file}</loc>`, "sitemap.xml");
-  assertIncludes(sitemap, "<lastmod>2026-06-30</lastmod>", "sitemap.xml");
+  assertIncludes(
+    sitemap,
+    `<loc>${canonicalHost}/${page.file}</loc>\n    <lastmod>${page.lastmod}</lastmod>`,
+    "sitemap.xml"
+  );
+  for (const text of page.requiredText) {
+    assertIncludes(html, text, page.file);
+  }
+}
+
+for (const page of caseEvidencePages) {
+  const html = read(page.file);
   for (const text of page.requiredText) {
     assertIncludes(html, text, page.file);
   }
@@ -257,10 +314,27 @@ assertIncludes(hub, `"@type": "BreadcrumbList"`, "guides/ai-programming-hub.html
 assertIncludes(hub, `"dateModified": "2026-06-29"`, "guides/ai-programming-hub.html");
 assertIncludes(hub, `<h3><a href="/guides/ai-coding-for-beginners.html">AI 新手编程</a></h3>`, "guides/ai-programming-hub.html");
 
+const projectGuide = read("guides/best-vibe-coding-projects.html");
+assertIncludes(projectGuide, `"numberOfItems": 3`, "guides/best-vibe-coding-projects.html");
+
 const home = read("index.html");
 const mainJs = read("src/main.js");
 
 assertIncludes(home, "/src/main.js?v=", "index.html");
+assertIncludes(home, "https://github.com/lsy928256297-ops/vibe-coding-radar", "index.html");
+
+const readme = read("README.md");
+assertIncludes(readme, "Vibe Coding 学习、项目与案例索引", "README.md");
+assertIncludes(readme, `${canonicalHost}/guides/ai-learning-roadmap.html`, "README.md");
+assertIncludes(readme, `${canonicalHost}/guides/best-vibe-coding-projects.html`, "README.md");
+assertIncludes(readme, "docs/vibe-coding-learning-project-cases.md", "README.md");
+
+for (const authorityFile of ["CITATION.cff", "docs/vibe-coding-learning-project-cases.md"]) {
+  assert(existsSync(join(root, authorityFile)), `${authorityFile} must exist`);
+  const authorityContent = read(authorityFile);
+  assertIncludes(authorityContent, canonicalHost, authorityFile);
+  assertIncludes(authorityContent, "Vibe Coding", authorityFile);
+}
 
 for (const hiddenPage of homeHiddenPages) {
   assertExcludes(home, hiddenPage, "index.html");

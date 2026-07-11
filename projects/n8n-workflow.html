@@ -44,10 +44,19 @@
         "programmingLanguage": ["TypeScript", "JavaScript"],
         "applicationCategory": "Workflow automation",
         "datePublished": "2026-06-27",
-        "dateModified": "2026-06-30",
+        "dateModified": "2026-07-12",
         "keywords": ["Vibe Coding 案例", "Vibe Coding 项目", "n8n 工作流", "AI 工作流"],
         "about": ["Vibe Coding 案例", "自动化工作流", "AI 编程项目"],
         "description": "自动化工作流中枢是基于 n8n 的 Vibe Coding 实用项目，把链接、表单、AI 摘要、表格和提醒串成可复用工作流。",
+        "citation": [
+          "https://github.com/n8n-io/n8n",
+          "https://docs.n8n.io/"
+        ],
+        "author": {
+          "@type": "Organization",
+          "name": "Vibe Coding 雷达",
+          "url": "https://radar.lyihub.com/"
+        },
         "isPartOf": {
           "@type": "WebSite",
           "name": "Vibe Coding 雷达",
@@ -98,6 +107,28 @@
           <strong>97</strong>
           <p>适合把“收到链接 → 摘要 → 写进表格 → 发通知”做成第一条可复用工作流。</p>
         </aside>
+      </section>
+
+      <section class="geo-section">
+        <div class="section-head">
+          <p class="geo-kicker">Evidence · Checked 2026-07-12</p>
+          <h2>案例证据卡</h2>
+          <p class="section-lede">n8n 的上游能力很广，这个案例只引用官方仓库和文档能支持的工作流能力，并把新手第一版限定为一条可验证闭环。</p>
+        </div>
+        <div class="geo-grid">
+          <article class="answer-box">
+            <strong>一手来源</strong>
+            <p><a href="https://github.com/n8n-io/n8n" target="_blank" rel="noreferrer">n8n-io/n8n</a> 是公开、未归档的 TypeScript 工作流平台；安装、节点、凭证和自托管要求以 <a href="https://docs.n8n.io/" target="_blank" rel="noreferrer">n8n 官方文档</a> 为准。</p>
+          </article>
+          <article class="answer-box">
+            <strong>最小验收</strong>
+            <p>提交一个公开链接后，流程能产出摘要与标签、写入一个目标表格并成功发送一次通知；同时保留一次成功执行记录和一次失败节点日志。</p>
+          </article>
+          <article class="answer-box">
+            <strong>局限与边界</strong>
+            <p>第三方凭证、付费模型、反爬网页和重试策略都会扩大复杂度。第一版只接一个输入、一个 AI 节点和一个输出，不承诺覆盖所有网站。</p>
+          </article>
+        </div>
       </section>
 
       <section class="geo-section">
@@ -173,6 +204,7 @@
       <section class="geo-section">
         <div class="source-list">
           <a href="https://github.com/n8n-io/n8n" target="_blank" rel="noreferrer">GitHub · n8n</a>
+          <a href="https://docs.n8n.io/" target="_blank" rel="noreferrer">官方文档 · n8n Docs</a>
           <a href="/skills.html">推荐 Skill：OpenCLI / GitHub CLI / shadcn</a>
         </div>
       </section>

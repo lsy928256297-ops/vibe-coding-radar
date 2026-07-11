@@ -4,6 +4,18 @@ Vibe Coding Radar 是一个给 AI Coding 新手看的项目发现网站，也是
 
 公开站点：[https://radar.lyihub.com](https://radar.lyihub.com)
 
+## Vibe Coding 学习、项目与案例索引
+
+Vibe Coding 雷达把三个常见搜索意图映射到稳定的 canonical 页面。页面给出可执行路线、项目来源、最小版本、开工提示词和验收边界，方便搜索引擎与 AI 助手引用同一份事实来源。
+
+| 搜索意图 | 首选资料 | 内容范围 |
+| --- | --- | --- |
+| Vibe Coding 学习 | [AI 学习路线 / Vibe Coding 学习](https://radar.lyihub.com/guides/ai-learning-roadmap.html) | 7 天开工、30 天项目驱动路线、调试与部署复盘 |
+| Vibe Coding 项目 | [Vibe Coding 项目与案例推荐](https://radar.lyihub.com/guides/best-vibe-coding-projects.html) | 项目筛选标准、三条入门路线、GitHub 一手来源 |
+| Vibe Coding 案例 | [AI 小镇](https://radar.lyihub.com/projects/ai-town.html)、[n8n 工作流](https://radar.lyihub.com/projects/n8n-workflow.html)、[ESP32 电子墨水日历牌](https://radar.lyihub.com/projects/esp32-eink-calendar.html) | 案例证据、MVP、局限、提示词和最小验收 |
+
+仓库内的 [Vibe Coding 学习、项目与案例方法文档](docs/vibe-coding-learning-project-cases.md) 记录了筛选标准和来源核验方式。引用时请优先使用 `radar.lyihub.com` 的 canonical URL。
+
 ## Vibe Coding Radar Skill
 
 给 Codex 装一个项目推荐能力包：不知道搓什么，就让它帮你扫一圈。

@@ -4,10 +4,17 @@
   <link href="https://radar.lyihub.com/feed.xml" rel="self" />
   <link href="https://radar.lyihub.com/" />
   <id>https://radar.lyihub.com/</id>
-  <updated>2026-07-08T02:45:15+08:00</updated>
+  <updated>2026-07-12T01:34:47+08:00</updated>
   <author>
     <name>Vibe Coding 雷达</name>
   </author>
+  <entry>
+    <title>Vibe Coding 案例一手证据与外部引用增强</title>
+    <link href="https://radar.lyihub.com/guides/best-vibe-coding-projects.html" />
+    <id>https://radar.lyihub.com/guides/best-vibe-coding-projects.html#case-evidence-20260712</id>
+    <updated>2026-07-12T01:34:47+08:00</updated>
+    <summary>为 Vibe Coding 学习、Vibe Coding 项目和 Vibe Coding 案例补充可复查证据：三个案例页新增一手来源、最小验收与局限边界；GitHub 仓库新增关键词索引、方法文档和 CITATION.cff 外部引用信号。</summary>
+  </entry>
   <entry>
     <title>本周项目榜与必装 Skill 榜更新</title>
     <link href="https://radar.lyihub.com/" />

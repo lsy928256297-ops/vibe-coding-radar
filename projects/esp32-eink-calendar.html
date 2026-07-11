@@ -43,10 +43,19 @@
         "programmingLanguage": ["YAML", "C++"],
         "applicationCategory": "Hardware project",
         "datePublished": "2026-06-27",
-        "dateModified": "2026-06-30",
+        "dateModified": "2026-07-12",
         "keywords": ["Vibe Coding 案例", "Vibe Coding 项目", "ESP32 电子墨水日历", "AI Coding 硬件"],
         "about": ["Vibe Coding 案例", "硬件项目", "AI 编程项目"],
         "description": "ESP32 电子墨水日历牌是一类适合 Vibe Coding 硬件新手的桌面项目，用低功耗屏显示日程、天气、待办和提醒。",
+        "citation": [
+          "https://github.com/Xinyuan-LilyGO/LilyGo-T5-Epaper-Series",
+          "https://github.com/AppForce1/lilygo-t5-47-plus-esphome"
+        ],
+        "author": {
+          "@type": "Organization",
+          "name": "Vibe Coding 雷达",
+          "url": "https://radar.lyihub.com/"
+        },
         "isPartOf": {
           "@type": "WebSite",
           "name": "Vibe Coding 雷达",
@@ -97,6 +106,28 @@
           <strong>91</strong>
           <p>建议先做每 30 分钟刷新天气和今日待办，晚上进入低功耗模式。</p>
         </aside>
+      </section>
+
+      <section class="geo-section">
+        <div class="section-head">
+          <p class="geo-kicker">Evidence · Checked 2026-07-12</p>
+          <h2>案例证据卡</h2>
+          <p class="section-lede">硬件案例必须同时核对板卡上游和具体实现，尤其不能把相近屏幕型号、驱动芯片或引脚配置混成一套教程。</p>
+        </div>
+        <div class="geo-grid">
+          <article class="answer-box">
+            <strong>一手来源</strong>
+            <p><a href="https://github.com/Xinyuan-LilyGO/LilyGo-T5-Epaper-Series" target="_blank" rel="noreferrer">LILYGO T5 Epaper Series</a> 提供板卡上游资料；<a href="https://github.com/AppForce1/lilygo-t5-47-plus-esphome" target="_blank" rel="noreferrer">社区 ESPHome 实现</a> 提供日历牌参考。</p>
+          </article>
+          <article class="answer-box">
+            <strong>最小验收</strong>
+            <p>先用假数据稳定显示日期、天气和 3 条待办，完成一次定时刷新并记录屏幕型号、驱动和配置文件，再接真实数据源。</p>
+          </article>
+          <article class="answer-box">
+            <strong>局限与边界</strong>
+            <p>社区实现未声明开源许可证，复用代码前要核对授权；不同尺寸、驱动和引脚不能直接套用，采购与烧录都以实际板卡为准。</p>
+          </article>
+        </div>
       </section>
 
       <section class="geo-section">
@@ -172,6 +203,7 @@
       <section class="geo-section">
         <div class="source-list">
           <a href="https://github.com/AppForce1/lilygo-t5-47-plus-esphome" target="_blank" rel="noreferrer">GitHub · LilyGo ESPHome Calendar</a>
+          <a href="https://github.com/Xinyuan-LilyGO/LilyGo-T5-Epaper-Series" target="_blank" rel="noreferrer">硬件上游 · LILYGO T5 Epaper Series</a>
           <a href="/skills.html">推荐 Skill：GitHub CLI / OpenCLI</a>
         </div>
       </section>

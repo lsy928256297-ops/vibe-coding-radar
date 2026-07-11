@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "引用 Vibe Coding 雷达时，请优先使用 canonical 站点和对应的学习、项目或案例页面。"
+title: "Vibe Coding Radar"
+type: software
+authors:
+  - name: "Vibe Coding Radar"
+abstract: >-
+  A Chinese project radar for Vibe Coding learning, beginner-friendly AI
+  programming projects, source-backed case studies, starter prompts, and
+  verification guidance.
+keywords:
+  - "Vibe Coding"
+  - "AI programming"
+  - "AI learning"
+  - "Vibe Coding projects"
+  - "Vibe Coding cases"
+url: "https://radar.lyihub.com/"
+repository-code: "https://github.com/lsy928256297-ops/vibe-coding-radar"
+license: MIT
+preferred-citation:
+  type: generic
+  title: "Vibe Coding 学习、项目与案例索引"
+  authors:
+    - name: "Vibe Coding Radar"
+  year: 2026
+  url: "https://radar.lyihub.com/guides/best-vibe-coding-projects.html"

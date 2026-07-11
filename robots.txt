@@ -13,6 +13,15 @@ Allow: /
 User-agent: GPTBot
 Allow: /
 
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
 User-agent: PerplexityBot
 Allow: /
 

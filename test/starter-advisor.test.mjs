@@ -3,9 +3,12 @@ import { readFileSync } from "node:fs";
 import test from "node:test";
 import vm from "node:vm";
 
-function loadStarterRuntime() {
+function loadStarterRuntime(initialLikeState) {
   const source = readFileSync(new URL("../src/main.js", import.meta.url), "utf8");
   const storage = new Map();
+  if (initialLikeState) {
+    storage.set("vibe-radar-project-likes-v1", JSON.stringify(initialLikeState));
+  }
   const sandbox = {
     Blob: function Blob() {},
     Intl,
@@ -68,9 +71,11 @@ function loadStarterRuntime() {
 
   vm.runInNewContext(
     `${source}
-globalThis.__starter = {
+	globalThis.__starter = {
   getProjectLikeCount: typeof getProjectLikeCount === "undefined" ? undefined : getProjectLikeCount,
   canLikeProject: typeof canLikeProject === "undefined" ? undefined : canLikeProject,
+  handleProjectLike: typeof handleProjectLike === "undefined" ? undefined : handleProjectLike,
+  hydrateProjectLikes: typeof hydrateProjectLikes === "undefined" ? undefined : hydrateProjectLikes,
   projectById,
   projectCard,
   projectLikeCooldownMs: typeof projectLikeCooldownMs === "undefined" ? undefined : projectLikeCooldownMs,
@@ -79,7 +84,8 @@ globalThis.__starter = {
   starterScore,
   starterOptions,
   starterRecommendations,
-  starterState
+  starterState,
+  setFetch: (fetchImpl) => { window.fetch = fetchImpl; }
 };`,
     sandbox,
   );
@@ -181,4 +187,32 @@ test("project likes render on cards and enforce a ten minute cooldown", () => {
   assert.equal(runtime.canLikeProject("fun-1", 1_000 + 10 * 60 * 1000 + 1), true);
   const secondCount = runtime.recordProjectLike("fun-1", 1_000 + 10 * 60 * 1000 + 1);
   assert.equal(secondCount, 2);
+});
+
+test("a failed shared like rolls back the optimistic count and cooldown", async () => {
+  const runtime = loadStarterRuntime();
+  runtime.setFetch(async () => ({ ok: false, status: 503 }));
+
+  await runtime.handleProjectLike("fun-1");
+
+  assert.equal(runtime.getProjectLikeCount("fun-1"), 0);
+  assert.equal(runtime.canLikeProject("fun-1"), true);
+});
+
+test("shared hydration replaces stale local-only counts", async () => {
+  const runtime = loadStarterRuntime({
+    counts: { "fun-1": 1 },
+    likedAt: { "fun-1": Date.now() },
+  });
+  runtime.setFetch(async () => ({
+    json: async () => ({ counts: { "stars-6": 1 } }),
+    ok: true,
+    status: 200,
+  }));
+
+  await runtime.hydrateProjectLikes();
+
+  assert.equal(runtime.getProjectLikeCount("fun-1"), 0);
+  assert.equal(runtime.canLikeProject("fun-1"), true);
+  assert.equal(runtime.getProjectLikeCount("stars-6"), 1);
 });

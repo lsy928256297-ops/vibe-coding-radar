@@ -2132,6 +2132,13 @@ function updateLikeButtons(projectId) {
   });
 }
 
+function rollbackProjectLike(projectId, countBefore) {
+  delete projectLikeState.likedAt[projectId];
+  projectLikeState.counts[projectId] = Math.max(0, Math.floor(Number(countBefore) || 0));
+  saveProjectLikeState();
+  updateLikeButtons(projectId);
+}
+
 async function hydrateProjectLikes() {
   if (!projectLikesApiAvailable || typeof window.fetch !== "function") return;
   try {
@@ -2144,9 +2151,10 @@ async function hydrateProjectLikes() {
     }
     const data = await response.json();
     const counts = normalizeLikeMap(data.counts);
-    Object.entries(counts).forEach(([projectId, count]) => {
-      projectLikeState.counts[projectId] = count;
+    Object.keys(projectLikeState.likedAt).forEach((projectId) => {
+      if (!counts[projectId]) delete projectLikeState.likedAt[projectId];
     });
+    projectLikeState.counts = counts;
     saveProjectLikeState();
     render({ preserveFocus: true });
   } catch {
@@ -2154,8 +2162,11 @@ async function hydrateProjectLikes() {
   }
 }
 
-async function syncProjectLike(projectId) {
-  if (!projectLikesApiAvailable || typeof window.fetch !== "function") return;
+async function syncProjectLike(projectId, countBefore) {
+  if (!projectLikesApiAvailable || typeof window.fetch !== "function") {
+    rollbackProjectLike(projectId, countBefore);
+    return;
+  }
   try {
     const response = await window.fetch("/api/likes", {
       body: JSON.stringify({ projectId }),
@@ -2175,6 +2186,7 @@ async function syncProjectLike(projectId) {
     }
     if (!response.ok) {
       projectLikesApiAvailable = false;
+      rollbackProjectLike(projectId, countBefore);
       return;
     }
     const data = await response.json();
@@ -2184,6 +2196,7 @@ async function syncProjectLike(projectId) {
     }
   } catch {
     projectLikesApiAvailable = false;
+    rollbackProjectLike(projectId, countBefore);
   }
 }
 
@@ -2192,8 +2205,9 @@ function handleProjectLike(projectId) {
   const countAfter = recordProjectLike(projectId);
   updateLikeButtons(projectId);
   if (countAfter > countBefore) {
-    syncProjectLike(projectId);
+    return syncProjectLike(projectId, countBefore);
   }
+  return Promise.resolve();
 }
 
 function hydrateStateFromUrl() {

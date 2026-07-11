@@ -1,6 +1,9 @@
 desktop-preview.png
 mobile-preview.png
 *-preview.png
+radar-starter-final-*.png
+.superpowers/
+test/
 node_modules
 .DS_Store
 monitor.html

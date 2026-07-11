@@ -316,6 +316,16 @@ assertIncludes(hub, `<h3><a href="/guides/ai-coding-for-beginners.html">AI 新�
 
 const projectGuide = read("guides/best-vibe-coding-projects.html");
 assertIncludes(projectGuide, `"numberOfItems": 3`, "guides/best-vibe-coding-projects.html");
+assertIncludes(projectGuide, `"@type": "Dataset"`, "guides/best-vibe-coding-projects.html");
+assertIncludes(projectGuide, "90 个 Vibe Coding 项目开放数据", "guides/best-vibe-coding-projects.html");
+
+const datasetReleaseBase =
+  "https://github.com/lsy928256297-ops/vibe-coding-radar/releases/download/v2026.07.12-geo";
+for (const datasetFile of ["vibe-coding-projects.json", "vibe-coding-projects.csv"]) {
+  assert(existsSync(join(root, "data", datasetFile)), `${datasetFile} must exist`);
+  assertIncludes(projectGuide, `${datasetReleaseBase}/${datasetFile}`, "guides/best-vibe-coding-projects.html");
+  assertIncludes(llms, `${datasetReleaseBase}/${datasetFile}`, "llms.txt");
+}
 
 const home = read("index.html");
 const mainJs = read("src/main.js");

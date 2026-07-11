@@ -38,3 +38,20 @@ test("publishes the 90 curated Vibe Coding projects as machine-readable data", (
     "id,track,track_label,rank,name,tagline,stack,mvp,wow,useful,easy,source,source_url,demo_url,radar_case_url,reviewed_on",
   );
 });
+
+test("connects the public dataset to the project guide and AI discovery file", () => {
+  const guide = readFileSync(
+    new URL("../guides/best-vibe-coding-projects.html", import.meta.url),
+    "utf8",
+  );
+  const llms = readFileSync(new URL("../llms.txt", import.meta.url), "utf8");
+  const releaseBase =
+    "https://github.com/lsy928256297-ops/vibe-coding-radar/releases/download/v2026.07.12-geo";
+
+  assert.match(guide, /"@type": "Dataset"/);
+  assert.match(guide, /90 个 Vibe Coding 项目开放数据/);
+  assert.ok(guide.includes(`${releaseBase}/vibe-coding-projects.json`));
+  assert.ok(guide.includes(`${releaseBase}/vibe-coding-projects.csv`));
+  assert.ok(llms.includes(`${releaseBase}/vibe-coding-projects.json`));
+  assert.ok(llms.includes(`${releaseBase}/vibe-coding-projects.csv`));
+});
